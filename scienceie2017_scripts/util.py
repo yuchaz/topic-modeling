@@ -122,13 +122,13 @@ def parseXML(fpath="data/dev/S0010938X13003818.xml"):
 
     parser.parse(fpath)
 
-    print("Title:", Handler.title)
-    for h in Handler.highlights:
-        print("Highlight:", h)
-    print("Abstract:", Handler.abstract)
-    for n, t in Handler.text.items():
-        print("Text:", t)
-
+    return Handler
+    # print("Title:", Handler.title)
+    # for h in Handler.highlights:
+    #     print("Highlight:", h)
+    # print("Abstract:", Handler.abstract)
+    # for n, t in Handler.text.items():
+    #     print("Text:", t)
 
 def parseXMLAll(dirpath = "data/dev/"):
 
