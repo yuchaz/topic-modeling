@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import xml.sax
 import collections
@@ -97,8 +98,8 @@ class PubHandler(xml.sax.ContentHandler):
         elif self.highlightflag == True:
             if content.startswith("Highlights"):
                 content = content.replace("Highlights", "", 1)
-            if content.startswith("•"):
-                content = content.replace("•", "", 1)
+            if content.startswith("•".decode('utf-8')):
+                content = content.replace("•".decode('utf-8'), "", 1)
             self.textbuilder_highlight.append(content)
         elif self.inpara == True and self.highlightflag == False:
             self.textbuilder.append(content)
