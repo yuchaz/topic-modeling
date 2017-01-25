@@ -4,7 +4,8 @@ import nltk
 import gensim
 import pprint
 
-HOMEDIR = './storage/texts/'
+# HOMEDIR = './storage/texts/'
+HOMEDIR = './storage/journalname_title/'
 MODELS_DIR = './storage/models'
 def main():
     stoplist = set(nltk.corpus.stopwords.words("english"))

@@ -79,7 +79,8 @@ class PubHandler(xml.sax.ContentHandler):
         # Call when a character is read
         if self.CurrentData == "dc:identifier":
             self.id = content
-        elif self.CurrentData == "prism:publicationName":
+        # elif self.CurrentData == "prism:publicationName":
+        elif self.CurrentData == "xocs:srctitle":
             self.journalname = content
         elif self.CurrentData == "openaccess":
             self.openaccess = content
@@ -123,7 +124,7 @@ def parseXML(fpath="data/dev/S0010938X13003818.xml"):
     parser.parse(fpath)
 
     return Handler
-    
+
 def parseXMLAll(dirpath = "data/dev/"):
 
     dir = os.listdir(dirpath)
