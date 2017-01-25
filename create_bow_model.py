@@ -28,7 +28,7 @@ class MyCorpus(object):
 def main():
     stoplist = set(nltk.corpus.stopwords.words("english"))
     corpus = MyCorpus(TEXTS_DIR, stoplist)
-    corpus.dictionary.save(os.path.join(MODELS_DIR, "mtsamples.mm"))
+    corpus.dictionary.save(os.path.join(MODELS_DIR, "mtsamples.dict"))
     gensim.corpora.MmCorpus.serialize(os.path.join(MODELS_DIR, "mtsamples.mm"),
                                       corpus)
 
