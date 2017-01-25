@@ -1,4 +1,4 @@
-from preprocessing.extract_texts import save_texts
+from package.extract_texts import save_texts
 
 def main():
     save_texts()

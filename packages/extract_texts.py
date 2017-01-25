@@ -1,5 +1,6 @@
 from scienceie2017_scripts.util import parseXML
 import os
+import gensim
 
 TEXTS_DIR = './storage/texts/'
 DATA_DIR = './scienceie2017_data/dev/'
