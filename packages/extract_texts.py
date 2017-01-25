@@ -3,20 +3,32 @@ import os
 import gensim
 
 TEXTS_DIR = './storage/texts/'
-DATA_DIR = './scienceie2017_data/dev/'
+DATA_DIR = './scienceie2017_data/train/'
 JOURNALNAME_TITLE_DIR = './storage/journalname_title/'
 
 def extract_journalname_title_pair_from_xml(fpath):
     Handler = parseXML(fpath)
-    return (Handler.journalname + " " + Handler.title).encode('utf-8')
+    return (Handler.journalname + "\t" + Handler.title).encode('utf-8')
+
+def extract_all_jtpair(dirpath=DATA_DIR):
+    file_paths = os.listdir(dirpath)
+    for fn in file_paths:
+        if not fn.endswith(".xml"): continue
+        yield extract_journalname_title_pair_from_xml(os.path.join(dirpath, fn))
 
 def extract_journal_title_from_xml(fpath):
     Handler = parseXML(fpath)
     return Handler.journalname
 
+def extract_full_journal_name(dirpath=DATA_DIR):
+    file_paths = os.listdir(dirpath)
+    for fn in file_paths:
+        if not fn.endswith(".xml"): continue
+        yield extract_journal_title_from_xml(os.path.join(dirpath, fn))
+
 def extract_paper_title_from_xml(fpath):
     Handler = parseXML(fpath)
-    return Handler.title
+    return (Handler.title).encode('utf-8')
 
 def extract_text_from_xml(fpath):
     Handler = parseXML(fpath)
@@ -24,7 +36,7 @@ def extract_text_from_xml(fpath):
 
 def extract_all_texts(dirpath=DATA_DIR):
     file_paths = os.listdir(dirpath)
-    yield (extractTextFromXml(fpath) for fpath in file_paths)
+    yield (extract_text_from_xml(fpath) for fpath in file_paths)
 
 def save_title_and_journal_name(data_dir=DATA_DIR, jt_dir=JOURNALNAME_TITLE_DIR):
     for data_filename in os.listdir(data_dir):
@@ -38,7 +50,8 @@ def save_title_and_journal_name(data_dir=DATA_DIR, jt_dir=JOURNALNAME_TITLE_DIR)
             except OSError as exc:
                 if exc.errno != errno.EEXIST: raise
         with open (jt_path, 'w+') as jt_file:
-            jt_file.write(extract_journalname_title_pair_from_xml(os.path.join(data_dir, data_filename)))
+            # jt_file.write(extract_journalname_title_pair_from_xml(os.path.join(data_dir, data_filename)))
+            jt_file.write(extract_paper_title_from_xml(os.path.join(data_dir, data_filename)))
         jt_file.close()
 
 def save_texts(datapath=DATA_DIR, textpath=TEXTS_DIR):
