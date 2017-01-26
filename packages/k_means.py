@@ -26,11 +26,21 @@ def find_elbow_point(data_to_fit, max_k=MAX_K):
 
     return np.argmin(diff3[3:]) + 3
 
-def run_k_mean_and_get_optimal_k(corpus_lsi):
-    data = convert_lsi_to_vector(corpus_lsi)
+def run_k_mean_and_get_optimal_k(corpus_lsi, initial_dim):
+    # data = convert_lsi_to_vector(corpus_lsi)
+    data = convert_lda_to_vector(corpus_lsi, initial_dim)
     return find_elbow_point(data)
 
-def run_k_mean_with_k(corpus_lsi, k):
-    data_to_fit = convert_lsi_to_vector(corpus_lsi)
+def run_k_mean_with_k(corpus_lda, k):
+    data_to_fit = convert_lda_to_vector(corpus_lda, k)
     kmeans = KMeans(n_clusters=k, random_state=0).fit(data_to_fit)
-    import pdb; pdb.set_trace()
+    return kmeans.labels_
+
+def convert_lda_to_vector(corpus_lda, num_topics):
+    vectors = []
+    for token_vector in corpus_lda:
+        vector = [0]*num_topics
+        for k,v in token_vector:
+            vector[k] = v
+        vectors.append(vector)
+    return vectors
