@@ -1,0 +1,377 @@
+6	Annals of Physics	On the inclusion of collisional correlations in quantum dynamics
+4	Annals of Physics	Quantum theory as a description of robust experiments: Derivation of the Pauli equation
+2	Annals of Physics	The Casimir effect for fields with arbitrary spin
+1	Chemical Physics Letters	Spectrally resolved photon echo spectroscopy of Zn(II), Co(II) and Ni(II)–octaethyl porphyrins
+4	Chemical Physics Letters	Equation of motion coupled cluster theory calculations of the X-ray emission spectroscopy of water
+7	Chemical Physics Letters	Controlling the femtosecond laser-driven transformation of dicyclopentadiene into cyclopentadiene
+6	Chemical Physics Letters	Stability and dynamics of vacancy in graphene flakes: Edge effects
+1	Chemical Physics Letters	Vibrational energy transfer in N(2D)+N2 collisions: A quasiclassical trajectory study
+6	Chemical Physics Letters	Absorption cross-sections of hole polarons in glassy and β-phase polyfluorene
+4	Chemical Physics Letters	Multiple transition states and roaming in ion–molecule reactions: A phase space perspective
+2	Chemical Physics Letters	Free energy basin-hopping
+0	Chemical Physics Letters	Polymorphism of dioctyl-terthiophene within thin films: The role of the first monolayer
+6	Chemical Physics Letters	Protective effect of ascorbic acid against double-strand breaks in giant DNA: Marked differences among the damage induced by photo-irradiation, gamma-rays and ultrasound
+3	Corrosion Science	In situ observation of the oxidation of S32101 duplex stainless steel at 900°C
+3	Corrosion Science	On-site transient analysis for the corrosion assessment of reinforced concrete
+1	Corrosion Science	Chromia layer growth on a Ni-based superalloy: Sub-parabolic kinetics and the role of titanium
+7	Corrosion Science	Influence of plasma electrolytic oxidation on fatigue performance of AZ61 magnesium alloy
+0	Corrosion Science	Time-lapse synchrotron X-ray diffraction to monitor conservation coatings for heritage lead in atmospheres polluted with oak-emitted volatile organic compounds
+5	Corrosion Science	A new combinatorial approach to assess the influence of alloy composition on the oxidation behavior and concurrent oxygen-induced phase transformations for binary Ti–xCr alloys at 650°C
+5	Corrosion Science	Observation of the effect of surface roughness on the oxidation of Zircaloy-4
+0	Corrosion Science	Synchrotron X-ray radiography studies of pitting corrosion of stainless steel: Extraction of pit propagation parameters
+3	Corrosion Science	Effect of sulphate impurity in chromic acid anodizing of aluminium
+4	Corrosion Science	Micro-mechanical measurement of fracture behaviour of individual grain boundaries in Ni alloy 600 exposed to a pressurized water reactor environment
+3	Corrosion Science	Sample selection for extreme value analysis of inspection data collected from corroded surfaces
+3	Corrosion Science	Sample selection for extreme value analysis of inspection data collected from corroded surfaces
+7	The Journal of Chemical Thermodynamics	The vibrational and configurational entropy of α-brass
+5	Journal of Computational Physics	A Monte Carlo algorithm for degenerate plasmas
+8	Journal of Computational Physics	An enhanced Immersed Structural Potential Method for fluid–structure interaction
+8	Journal of Computational Physics	Fluid simulations with atomistic resolution: a hybrid multiscale method with field-wise coupling
+1	Journal of Computational Physics	A numerical modelling of gas exchange mechanisms between air and turbulent water with an aquarium chemical reaction
+6	Journal of Computational Physics	Hybrid continuum–molecular modelling of multiscale internal gas flows
+7	Journal of Computational Physics	High-order spectral/hp element discretisation for reaction–diffusion problems on surfaces: Application to cardiac electrophysiology
+6	Journal of Computational Physics	Multiscale simulation of non-isothermal microchannel gas flows
+8	Journal of Computational Physics	The Galerkin finite element method for a multi-term time-fractional diffusion equation
+8	Journal of Computational Physics	Finite element approximation of the radiative transport equation in a medium with piece-wise constant refractive index
+7	Journal of Computational Physics	A WENO-solver combined with adaptive momentum discretization for the Wigner transport equation and its application to resonant tunneling diodes
+6	Journal of Computational Physics	Asynchronous coupling of hybrid models for efficient simulation of multiscale systems
+8	Journal of Computational Physics	Three dimensional thermal-solute phase field simulation of binary alloy solidification
+1	Journal of Computational Physics	A hybrid particle-mesh method for incompressible active polar viscous gels
+0	Journal of Computational Physics	Boundary element based multiresolution shape optimisation in electrostatics
+1	Journal of Computational Physics	TVD differencing on three-dimensional unstructured meshes with monotonicity-preserving correction of mesh skewness
+7	Journal of Computational Physics	Dealiasing techniques for high-order spectral element methods on regular and irregular grids
+4	Journal of Computational Physics	Adaptive Haar wavelets for the angular discretisation of spectral wave models
+8	Journal of Computational Physics	Incompressible–compressible flows with a transient discontinuous interface using smoothed particle hydrodynamics (SPH)
+3	Journal of Computational Physics	Eigensolution analysis of spectral/hp continuous Galerkin approximations to advection–diffusion problems: Insights into spectral vanishing viscosity
+7	Journal of Nuclear Materials	Point defect formation and migration in Ga stabilised δ-Pu
+0	Journal of Nuclear Materials	1D kinetic modelling of the JET SOL with tungsten divertor plates
+0	Journal of Nuclear Materials	1D kinetic modelling of the JET SOL with tungsten divertor plates
+7	Journal of Nuclear Materials	Mechanism for radiation damage resistance in yttrium oxide dispersion strengthened steels
+4	Journal of Nuclear Materials	Recent advances in the study of the UO2–PuO2 phase diagram at high temperatures
+4	Journal of Nuclear Materials	Effects of thermal treatment on the mechanical integrity of silicon carbide in HTR fuel up to 2200°C
+2	Journal of Nuclear Materials	Finite element analysis of the tetragonal to monoclinic phase transformation during oxidation of zirconium alloys
+7	Journal of Nuclear Materials	Computer simulation of defect clusters in UO2 and their dependence on composition
+7	Journal of Nuclear Materials	Helium bubbles in bcc Fe and their interactions with irradiation
+8	Journal of Nuclear Materials	Small-scale characterisation of irradiated nuclear materials: Part I – Microstructure
+1	Journal of Nuclear Materials	A study into the impact of interface roughness development on mechanical degradation of oxides formed on zirconium alloys
+2	Journal of Nuclear Materials	Processing and microstructure characterisation of oxide dispersion strengthened Fe–14Cr–0.4Ti–0.25Y2O3 ferritic steels fabricated by spark plasma sintering
+6	Journal of Nuclear Materials	Following the electroreduction of uranium dioxide to uranium in LiCl–KCl eutectic in situ using synchrotron radiation
+3	Journal of Nuclear Materials	Critical assessment of finite element analysis applied to metal–oxide interface roughness in oxidising zirconium alloys
+3	Journal of Nuclear Materials	Evaluation of the interfacial shear strength and residual stress of TiAlN coating on ZIRLO™ fuel cladding using a modified shear-lag model approach
+5	Journal of Nuclear Materials	Utilising DualEELS to probe the nanoscale mechanisms of the corrosion of Zircaloy-4 in 350 °C pressurised water
+1	Journal of Nuclear Materials	Heat capacity of Bi2UO6
+5	Journal of Nuclear Materials	The behaviour under irradiation of molybdenum matrix for inert matrix fuel containing americium oxide (CerMet concept)
+4	Journal of Nuclear Materials	Xe diffusion and bubble nucleation around edge dislocations in UO2
+5	Journal of Nuclear Materials	Inert gas bubbles in bcc Fe
+3	Nuclear Engineering and Design	Code assessment and modelling for Design Basis Accident analysis of the European Sodium Fast Reactor design. Part II: Optimised core and representative transients analysis
+7	Nuclear Engineering and Design	SPHERE: Irradiation of sphere-pac fuel of UPuO2−x containing 3% Americium
+8	Physics of the Earth and Planetary Interiors	Jerks abound: An analysis of geomagnetic observatory data from 1957 to 2008
+0	Physics of the Earth and Planetary Interiors	Seismic imaging of the deep structure under the Chinese volcanoes: An overview
+1	Polymer	From the glassy state to ordered polymer structures: A microhardness study
+2	Polymer	Transmission electron microtomography in polymer research
+4	Polymer	Chain statistics in polyethylene crystallization
+2	Polymer	Computer modeling of polymer crystallization – Toward computer-assisted materials' design
+2	Polymer	How atomic force microscopy has contributed to our understanding of polymer crystallization
+2	Polymer	Atom transfer radical polymerization in inverse miniemulsion: A versatile route toward preparation and functionalization of microgels/nanogels for targeted drug delivery applications
+2	Polymer	Atom transfer radical polymerization in inverse miniemulsion: A versatile route toward preparation and functionalization of microgels/nanogels for targeted drug delivery applications
+3	Polymer	Nanotubes as polymers
+3	Polymer	Nanotubes as polymers
+5	Polymer	“Recombinamers” as advanced materials for the post-oil age
+3	Polymer	Sulfonated aromatic hydrocarbon polymers as proton exchange membranes for fuel cells
+5	Polymer	Miniemulsion polymerization for synthesis of structured clay/polymer nanocomposites: Short review and recent advances
+3	Polymer	Precise synthesis of polymers containing functional end groups by living ring-opening metathesis polymerization (ROMP): Efficient tools for synthesis of block/graft copolymers
+5	Polymer	The ROMP toolbox upgraded
+0	Polymer	Fluorinated poly(meth)acrylate: Synthesis and properties
+1	Solar Energy	Experimental characterisation of a Fresnel lens photovoltaic concentrating system
+6	Solar Energy	Smart windows: Thermal modelling and evaluation
+0	Solar Energy	Irradiance modelling for individual cells of shaded solar photovoltaic arrays
+8	Solar Energy	Progressive photon mapping for daylight redirecting components
+0	Solar Energy	Large scale PV systems under non-uniform and fault conditions
+6	Surface Science	Role of image forces in non-contact scanning force microscope images of ionic surfaces
+7	Computer Methods in Applied Mechanics and Engineering	Isogeometric analysis and domain decomposition methods
+0	Computer Methods in Applied Mechanics and Engineering	Reliability-based optimization of maintenance scheduling of mechanical components under fatigue
+0	Computer Methods in Applied Mechanics and Engineering	IETI – Isogeometric Tearing and Interconnecting
+2	Computer Methods in Applied Mechanics and Engineering	Multigrid methods for isogeometric discretization
+2	Computer Methods in Applied Mechanics and Engineering	Coupling systems biology with multiscale mechanics, for computer simulations of bone remodeling
+8	Computer Methods in Applied Mechanics and Engineering	Asynchronous variational integration using continuous assumed gradient elements
+4	Computer Methods in Applied Mechanics and Engineering	Distance fields on unstructured grids: Stable interpolation, assumed gradients, collision detection and gap function
+0	Computer Methods in Applied Mechanics and Engineering	Mixed and Galerkin finite element approximation of flow in a linear viscoelastic porous medium
+2	Computer Methods in Applied Mechanics and Engineering	Incompressible smoothed particle hydrodynamics (SPH) with reduced temporal noise and generalised Fickian smoothing applied to body–water slam and efficient wave–body interaction
+6	Computer Methods in Applied Mechanics and Engineering	A Laplacian-based algorithm for non-isothermal atomistic-continuum hybrid simulation of micro and nano-flows
+5	Computer Methods in Applied Mechanics and Engineering	Computational homogenization of liquid-phase sintering with seamless transition from macroscopic compressibility to incompressibility
+3	Computer Methods in Applied Mechanics and Engineering	A displacement-based finite element formulation for incompressible and nearly-incompressible cardiac mechanics
+6	Computer Methods in Applied Mechanics and Engineering	An impulse-based energy tracking method for collision resolution
+1	Computer Methods in Applied Mechanics and Engineering	An isoparametric approach to high-order curvilinear boundary-layer meshing
+7	Computer Methods in Applied Mechanics and Engineering	A sequential-adaptive strategy in space–time with application to consolidation of porous media
+7	Computer Methods in Applied Mechanics and Engineering	A sequential-adaptive strategy in space–time with application to consolidation of porous media
+6	Computer Methods in Applied Mechanics and Engineering	Reliable and efficient a posteriori error estimation for adaptive IGA boundary element methods for weakly-singular integral equations
+8	Computer Methods in Applied Mechanics and Engineering	Multiwavelet discontinuous Galerkin h-adaptive shallow water model
+6	Computer Methods in Applied Mechanics and Engineering	An extended range of stable-symmetric-conservative Flux Reconstruction correction functions
+7	Computer Methods in Applied Mechanics and Engineering	A spectral element formulation of the immersed boundary method for Newtonian fluids
+5	Computer Methods in Applied Mechanics and Engineering	Shape optimisation with multiresolution subdivision surfaces and immersed finite elements
+6	Progress in Materials Science	Nanowires sheathed inside nanotubes: Manipulation, properties and applications
+2	 Geosciences	MINERAL: A program for the propagation of analytical uncertainty through mineral formula recalculations
+3	 Geosciences	WASI-2D: A software tool for regionally optimized analysis of imaging spectrometer data from deep and shallow waters
+3	 Geosciences	Geological mapping using remote sensing data: A comparison of five machine learning algorithms, their response to variations in the spatial distribution of training data and the use of explicit spatial information
+3	 Geosciences	Computed reconstruction of spatial ammonoid-shell orientation captured from digitized grinding and landmark data
+1	 Energy Systems	Geographically distributed real-time digital simulations using linear prediction
+1	Signal Processing	Robust indoor speaker recognition in a network of audio and video sensors
+6	Wave Motion	A model of acoustic absorption in fluids based on a continuous distribution of relaxation times
+1	Wave Motion	Flow and geometry induced scattering of high frequency acoustic duct modes
+1	Wave Motion	One-dimensional reflection by a semi-infinite periodic row of scatterers
+8	Discrete Applied Mathematics	On the integer max-linear programming problem
+0	Discrete Applied Mathematics	Generalizations of bounds on the index of convergence to weighted digraphs
+7	Solid State Ionics	Exploring microstructural changes associated with oxidation in Ni–YSZ SOFC electrodes using high resolution X-ray computed tomography
+1	Solid State Ionics	A combinatorial nanoprecursor route for direct solid state chemistry: Discovery and electronic properties of new iron-doped lanthanum nickelates up to La4Ni2FeO10−δ
+7	Solid State Ionics	Variable temperature neutron diffraction study of crystal structure and transport pathways in oxide ion conductors Bi12.5Ln1.5ReO24.5 (Ln=Lu, Er)
+0	Solid State Ionics	Electrochemical properties of La0.6Sr0.4CoO3−δ thin films investigated by complementary impedance spectroscopy and isotope exchange depth profiling
+4	Solid State Ionics	Mapping electrochemically driven gas exchange of mixed conducting SrTi0.7Fe0.3O3−δ and Ce0.8Gd0.2O1.9 thin films by 18O tracer incorporation under reducing atmosphere
+3	Solid State Ionics	Oxygen reduction via grain boundary transport in thin film platinum electrodes on yttria stabilized zirconia
+7	Solid State Ionics	Nickel nanocatalyst exsolution from (La,Sr) (Cr,M,Ni)O3 (MMn,Fe) perovskites for the fuel oxidation layer of Oxygen Transport Membranes
+3	Microelectronic Engineering	Magnetically interacting low dimensional Ni-nanostructures within porous silicon
+1	Microelectronic Engineering	High aspect ratio silicon and polyimide nanopillars by combination of nanosphere lithography and intermediate mask pattern transfer
+1	Microelectronic Engineering	Design and fabrication of densely integrated silicon quantum dots using a VLSI compatible hydrogen silsesquioxane electron beam lithography process
+2	Microelectronic Engineering	Fullerene-based spin-on-carbon hardmask
+3	Microelectronic Engineering	Atomic resolution top-down nanofabrication with low-current focused-ion-beam thinning
+2	Microelectronic Engineering	Identification of intrinsic electron trapping sites in bulk amorphous silica from ab initio calculations
+0	Microelectronic Engineering	A computational study of Si–H bonds as precursors for neutral E′ centres in amorphous silica and at the Si/SiO2 interface
+6	Microelectronic Engineering	Low EOT GeO2/Al2O3/HfO2 on Ge substrate using ultrathin Al deposition
+6	Microelectronic Engineering	Self-folding nano- and micropatterned hydrogel tissue engineering scaffolds by single step photolithographic process
+0	Microelectronic Engineering	SU-8 etching in inductively coupled oxygen plasma
+6	Microelectronic Engineering	Increased efficiency of direct nanoimprinting on planar and curved bulk titanium through surface modification
+7	Microelectronic Engineering	Numerical modeling and experimental verification of through silicon via (TSV) filling in presence of additives
+4	Microelectronic Engineering	Growth assay of individual pollen tubes arrayed by microchannel device
+0	Microelectronic Engineering	Measuring electro-mechanical properties of thin films on polymer substrates
+3	Microelectronic Engineering	Lab-on-a-chip devices: How to close and plug the lab?
+3	Journal of Controlled Release	Biochemical engineering nerve conduits using peptide amphiphiles
+8	Journal of Controlled Release	Novel phage display-derived neuroblastoma-targeting peptides potentiate the effect of drug nanocarriers in preclinical settings
+0	Journal of Controlled Release	In vivo targeting of adoptively transferred T-cells with antibody- and cytokine-conjugated liposomes
+7	Journal of Controlled Release	Uptake and transport of B12-conjugated nanoparticles in airway epithelium
+6	Journal of Controlled Release	A novel emulsion-type adjuvant containing CpG oligodeoxynucleotides enhances CD8+ T-cell-mediated anti-tumor immunity
+3	Journal of Controlled Release	PEGylation improves the receptor-mediated transfection efficiency of peptide-targeted, self-assembling, anionic nanocomplexes
+0	Finite Elements in Analysis and Design	Modelling the failure of reinforced concrete with nonlocal and crack band approaches using the damage-plasticity model CDPM2
+4	Materials Chemistry and Physics	A theoretical and experimental exploration of the mechanism of microwave assisted 1,3-dipolar cycloaddition of pyridinium ylides to single walled carbon nanotubes
+1	Materials Chemistry and Physics	Investigation into the use of CaZrO3 as a facecoat material in the investment casting of TiAl alloys
+6	Materials Chemistry and Physics	On the effect of Nb-based compounds on the microstructure of Al–12Si alloy
+2	Materials Chemistry and Physics	Conductivity and redox stability of double perovskite oxide SrCaFe1+xMo1–xO6–δ (x = 0.2, 0.4, 0.6)
+2	Materials Chemistry and Physics	Conductivity and redox stability of double perovskite oxide SrCaFe1+xMo1–xO6–δ (x = 0.2, 0.4, 0.6)
+1	Computers and Geotechnics	The interaction factor method for energy pile groups
+5	Chemical Physics	Excited electronic states of MnO4−: Challenges for wavefunction and density functional response theories
+3	Chemical Physics	Fabrication and simulation of organic transistors and functional circuits
+5	Chemical Physics	Generating symmetry-adapted bases for non-Abelian point groups to be used in vibronic coupling Hamiltonians
+3	International Journal of Multiphase Flow	Study of gas-sheared liquid film in horizontal rectangular duct using high-speed LIF technique: Three-dimensional wavy structure and its relation to liquid entrainment
+3	International Journal of Multiphase Flow	An experimental characterization of liquid films in downwards co-current gas–liquid annular flow by particle image and tracking velocimetry
+1	International Journal of Multiphase Flow	Structures in gas–liquid churn flow in a large diameter vertical pipe
+3	 Operations Research	Stochastic programming analysis and solutions to schedule overcrowded operating rooms in China
+0	Information Systems	On modeling context-aware social collaboration processes
+8	Physics Reports	Nonlinear dynamics of cardiovascular ageing
+5	Physics Reports	Modified gravity and cosmology
+6	Physics Reports	Discerning non-autonomous dynamics
+7	Physics Letters B	Isomeric lepton mass matrices and bi-large neutrino mixing
+4	Physics Letters B	A note on partition functions of Gepner model orientifolds
+1	Physics Letters B	νe(ν̄e)–40Ar absorption cross sections for supernova neutrinos
+4	Physics Letters B	Non-local charges and quantum integrability of sigma models on the symmetric spaces SO(2n)/SO(n)×SO(n) and Sp(2n)/Sp(n)×Sp(n)
+3	Physics Letters B	Aharonov–Bohm effect and nucleon–nucleon phase shifts on the lattice
+2	Physics Letters B	Renormalisability of gauge invariant extensions of the squared gauge potential
+3	Physics Letters B	A simple model of neutrino masses from supersymmetry breaking
+7	Physics Letters B	Lepton dipole moments in extended technicolor models
+8	Physics Letters B	Coulomb interaction from the interplay between confinement and screening
+0	Physics Letters B	Can MSSM particle be the inflaton?
+3	Physics Letters B	Optimal-observable analysis of possible new physics using the b-quark in γγ→tt̄→bX
+5	Physics Letters B	Production of Θ+(1540) and Ξ pentaquark states in proton–proton interactions
+6	Physics Letters B	Dark energy and the nature of the graviton
+0	Physics Letters B	Hadron formation and attenuation in deep inelastic lepton scattering off nuclei
+4	Physics Letters B	Quantum-mechanical stability of fermion–soliton systems
+4	Physics Letters B	Scalar charmonium and glueball mixing in e+e−→J/ψX
+8	Physics Letters B	Exotic meson production in the f1(1285)π− system observed in the reaction π−p→ηπ+π−π−p at 18 GeV/c
+4	Physics Letters B	Charm quark–antiquark correlations in photon–proton scattering
+7	Physics Letters B	New data on tensor analyzing power Ayy of the relativistic deuteron breakup as additional test of deuteron structure at small distances
+7	Physics Letters B	Almost degenerate neutrinos and bi-large lepton mixing
+6	Physics Letters B	Quark mass effects on the stability of hybrid stars
+5	Physics Letters B	Stopping and isospin equilibration in heavy ion collisions
+0	Physics Letters B	Missing levels in correlated spectra
+0	Physics Letters B	Missing levels in correlated spectra
+8	Physics Letters B	Three-loop universal anomalous dimension of the Wilson operators in N=4 SUSY Yang–Mills model
+2	Physics Letters B	Anticharmed pentaquark Θc(3099) from QCD sum rules
+0	Physics Letters B	Implication of the B→(ρ,ω)γ branching ratios for the CKM phenomenology
+8	Physics Letters B	A possibility to determine the P-parity of the Θ+ pentaquark in the NN→YΘ+ reaction
+8	Physics Letters B	Quark distributions in a medium
+5	Physics Letters B	Quark coalescence for charmed mesons in ultrarelativistic heavy-ion collisions
+2	Physics Letters B	Vacuum expectation value of a Wegner–Wilson loop near the light-cone
+5	Physics Letters B	Neutrino production by UHECR proton interactions in the infrared background
+0	Physics Letters B	Reissner–Nordström metric in the Friedman–Robertson–Walker universe
+3	Physics Letters B	Ξ production at AGS energies
+8	Physics Letters B	Born–Infeld black holes in the presence of a cosmological constant
+1	Physics Letters B	3-branes and uniqueness of the Salam–Sezgin vacuum
+2	Physics Letters B	New observables in longitudinal single-spin asymmetries in semi-inclusive DIS
+4	Physics Letters B	Dynamical CP violation in the early Universe
+4	Physics Letters B	Family of singular solutions in a SUSY bulk-boundary system
+0	Physics Letters B	Dynamical study of the pentaquark antidecuplet
+0	Physics Letters B	Dynamical study of the pentaquark antidecuplet
+6	Physics Letters B	Singlet deformation and non(anti)commutative N=2 supersymmetric U(1) gauge theory
+5	Physics Letters B	Quantum escape of sudden future singularity
+6	Physics Letters B	Two-loop light fermion contribution to Higgs production and decays
+4	Physics Letters B	Search for the flavor-changing neutral current decay D0→μ+μ− with the HERA-B detector
+8	Physics Letters B	Poincaré invariant gravity with local supersymmetry as a gauge theory for the M-algebra
+3	Physics Letters B	Quantum chaos and nuclear mass systematics
+0	Physics Letters B	Measuring new-physics parameters in B penguin decays
+7	Physics Letters B	Determining the spin of supersymmetric particles at the LHC using lepton charge asymmetry
+1	Physics Letters B	Experimental study of trimuon events in neutrino charged-current interactions
+0	Physics Letters B	Decay constants of heavy meson of 0− state in relativistic Salpeter method
+2	Physics Letters B	Vector meson contributions in ε′/ε
+3	Physics Letters B	Brane solution with an increasing warp factor
+7	Physics Letters A	High inertness of W@Si12 cluster toward O2 molecule
+3	Physics Letters A	Rectifying performance in zigzag graphene nanoribbon heterojunctions with different edge hydrogenations
+4	Physics Letters A	Carrier dependent ferromagnetism in chromium doped topological insulator Cry(BixSb1−x)2−yTe3
+2	Physics Letters A	Bloch–Siegert shift in application to the astrophysical determination of the fundamental constants variation
+2	Physics Letters A	Short-time quantum propagator and Bohmian trajectories
+7	Physics Letters A	Glued trees algorithm under phase damping
+1	Physics Letters A	Photon exchange and entanglement formation during transmission through a rectangular quantum barrier
+4	Physics Letters A	Stern–Gerlach surfing in laser wakefield accelerators
+1	Journal of Non-Newtonian Fluid Mechanics	Modelling the jetting of dilute polymer solutions in drop-on-demand inkjet printing
+7	Journal of Non-Newtonian Fluid Mechanics	Inkjet printing of weakly elastic polymer solutions
+7	Journal of Non-Newtonian Fluid Mechanics	Stability of the boundary layer on a rotating disk for power-law fluids
+6	Journal of Non-Newtonian Fluid Mechanics	Gels formed from amino-acid derivatives, their novel rheology as probed by bulk and particle tracking rheological methods
+5	Journal of Non-Newtonian Fluid Mechanics	Modelling the interfacial peeling of pressure-sensitive adhesives
+6	Journal of Non-Newtonian Fluid Mechanics	Assessment of the stress relaxation characteristics of critical gels formed under unidirectional shear flow by controlled stress parallel superposition rheometry
+2	Journal of Non-Newtonian Fluid Mechanics	Validation of Optimal Fourier Rheometry for rapidly gelling materials and its application in the study of collagen gelation
+7	Journal of Non-Newtonian Fluid Mechanics	Oscillations of aqueous PEDOT:PSS fluid droplets and the properties of complex fluids in drop-on-demand inkjet printing
+3	European Journal of Operational Research	A multi-agent based cooperative approach to scheduling and routing
+6	European Journal of Operational Research	Progressive hedging applied as a metaheuristic to schedule production in open-pit mines accounting for reserve uncertainty
+1	European Journal of Operational Research	Transmission and generation investment in electricity markets: The effects of market splitting and network fee regimes
+2	European Journal of Operational Research	The weighted additive distance function
+2	European Journal of Operational Research	Stochastic short-term mine production schedule accounting for fleet allocation, operational considerations and blending restrictions
+4	European Journal of Operational Research	Compact Markov-modulated models for multiclass trace fitting
+8	Fluid Phase Equilibria	Coarse grained force field for the molecular simulation of natural gases and condensates
+8	Fluid Phase Equilibria	Modelling the phase and chemical equilibria of aqueous solutions of alkanolamines and carbon dioxide using the SAFT-γ SW group contribution approach
+3	Fluid Phase Equilibria	Thermal conductivity measurements of semiclathrate hydrates and aqueous solutions of tetrabutylammonium bromide (TBAB) and tetrabutylammonium chloride (TBAC) by the transient hot-wire using parylene-coated probe
+4	Fire Safety Journal	Fire risk analysis of residential buildings based on scenario clusters and its application in fire risk management
+1	Fire Safety Journal	On the effect of inverse modelling and compensation effects in computational pyrolysis for fire scenarios
+6	Journal of Geometry and Physics	The extended conformal Einstein field equations with matter: The Einstein–Maxwell field
+2	Telematics and Informatics	Hedonic modeling to explore the relationship of cell phone plan price and quality in Croatia
+7	Computers in Human Behavior	Migration from social casino games to gambling: Motivations and characteristics of gamers who gamble
+5	Superlattices and Microstructures	Growth of non-polar InGaN quantum dots with an underlying AlN/GaN distributed Bragg reflector by metal-organic vapour phase epitaxy
+3	 Language	On the use of deep feedforward neural networks for automatic language identification
+8	 Language	Acoustic adaptation to dynamic background conditions with asynchronous transformations
+2	Mechanical Systems and Signal Processing	Multivariate empirical mode decomposition and its application to fault diagnosis of rolling bearing
+2	Mechanical Systems and Signal Processing	Multivariate empirical mode decomposition and its application to fault diagnosis of rolling bearing
+5	Mechanical Systems and Signal Processing	Volterra series truncation and kernel estimation of nonlinear systems in the frequency domain
+2	International Journal of Approximate Reasoning	Bayesian selection of graphical regulatory models
+7	International Journal of Approximate Reasoning	Probabilistic abductive logic programming using Dirichlet priors
+2	Computerized Medical Imaging and Graphics	Surface reconstruction for planning and navigation of liver resections
+8	Computational Materials Science	Thermo-mechanical fatigue testing and simulation using a viscoplasticity model for a P91 steel
+0	Computational Materials Science	Modeling diffusion-governed solidification of ternary alloys – Part 1: Coupling solidification kinetics with thermodynamics
+8	Computational Materials Science	Atomistic investigation on the structure–property relationship during thermal spray nanoparticle impact
+2	Computational Materials Science	Co-continuous polymer systems: A numerical investigation
+1	Expert Systems with Applications	Sliding window-based support vector regression for predicting micrometeorological data
+3	Expert Systems with Applications	Combined influence of forearm orientation and muscular contraction on EMG pattern recognition
+3	Expert Systems with Applications	Combined influence of forearm orientation and muscular contraction on EMG pattern recognition
+7	Expert Systems with Applications	Combination of multiple diagnosis systems in Self-Healing networks
+7	 E International	Quantification of the phase fraction in steel using an electromagnetic sensor
+2	European Journal of Mechanics - B/Fluids	Convective and absolute instabilities in the boundary layer over rotating spheres with surface mass flux and incident axial flow
+1	International Journal of Human-Computer Studies	Short links and tiny keyboards: A systematic exploration of design trade-offs in link shortening services
+4	Medical Image Analysis	Vascular image registration techniques: A living review
+8	Medical Image Analysis	Autoadaptive motion modelling for MR-based respiratory motion estimation
+6	 Software	A web-based, interactive visualization tool for social environmental survey data
+0	Graphical Models	H2 regularity properties of singular parameterizations in isogeometric analysis
+0	Information Fusion	The basic principles of uncertain information fusion. An organised review of merging rules in different representation frameworks
+1	Information Fusion	Spatial anomaly detection in sensor networks using neighborhood information
+8	Ad Hoc Networks	Robust Ad-hoc Sensor Routing (RASeR) protocol for mobile wireless sensor networks
+0	Entertainment Computing	Mood Glove: A haptic wearable prototype system to enhance mood music in film
+8	IERI Procedia	The Research of Automated Select Test Cases for Aspect-oriented Software
+8	IERI Procedia	Modification in the Design of Varnish Plant at Crocodile Matchet Limited, Tema, Ghana
+7	IERI Procedia	Development and Characteristic of Digital Library as a Library Branch
+4	IERI Procedia	Research and Practice on “Triple-driven” Based Software Development Practical Teaching System
+3	IERI Procedia	A Novel Principal Component Analysis Color Identification Algorithm for Moving Plate Recognition system
+7	IERI Procedia	Factors Related to Improving Teaching of Sport Normal Students in China
+4	IERI Procedia	The Design and Implementation of a Process-Driven Higher Educational Administrative System
+4	IERI Procedia	The Design and Implementation of a Process-Driven Higher Educational Administrative System
+8	IERI Procedia	An Exploratory Study on the Curricula Constructions of Sports Major Free Normal Students in China
+2	IERI Procedia	A Brief Analysis on the Lettered Words in Chinese--From the Perspective of Ecolinguistics
+5	IERI Procedia	On the Fitness Training of Older People in an Aging Society
+1	IERI Procedia	Construct of Web-based Instructional Environment Based on Inter-subjectivity Fusing Cognition with Emotion–Taking the Website Design of the Quality Course Apparel Production and Management for Example
+2	IERI Procedia	Algorithms for Automatic Generation of Logical Questions on Mobile Devices
+6	IERI Procedia	Biomechanical Analysis on Hip-push Skills Applied in Walking Race
+3	IERI Procedia	Automatic Verification of Data-centric Web Service Specifications
+7	IERI Procedia	Informatics Related Branch's Curriculum and Role of Project Management
+0	IERI Procedia	Study on Macroscopical Dynamic Monitoring of New Increased Construction Land in Yinchuan Plain based on 20m Scale Middle Resolution Remote Sensing Data
+8	IERI Procedia	Diversity and Convergence Issues in Evolutionary Multiobjective Optimization: Application to Agriculture Science
+7	IERI Procedia	Coordination of Agricultural Products Supply Chain with Stochastic Yield by Price Compensation
+4	IERI Procedia	Application of Classification Scale Method (CSM) in Tight Sandstone Permeability Calculation
+1	IERI Procedia	E-procurement and E-supply Chain: Features and Development of E-collaboration
+1	IERI Procedia	E-procurement and E-supply Chain: Features and Development of E-collaboration
+3	IERI Procedia	Hypergraph Reconfigurability Analysis
+1	IERI Procedia	Rotation Invariant Multiple Face-detection Architecture for Smart TV
+6	IERI Procedia	Soft Sensor for COx Content in Tail Gas of PX Oxidation Side Reactions based on Particle Filters and EM Algorithm
+7	IERI Procedia	Increasing Immersiveness into a 3D Virtual World: Motion-tracking and Natural Navigation in vAcademia
+5	IERI Procedia	Diesel Engine PT Pump Fault Diagnosis based on the Characteristics of its Fuel Pressure
+0	IERI Procedia	Analysis and Design of Cellular Beam and its Verification
+8	IERI Procedia	Research on Residents’ Low-Carbon Consumption in Heilongjiang Province
+4	IERI Procedia	Ecological Effect of Multi-walled Carbon Nanotubes on Marine Microalgae Pseudo-Nitzschia Pungens and Isochrysis Galbana
+4	IERI Procedia	Ecological Effect of Multi-walled Carbon Nanotubes on Marine Microalgae Pseudo-Nitzschia Pungens and Isochrysis Galbana
+8	IERI Procedia	Application of Retrospective Environmental Carrying Capacity Assessment for Marine Reclamation
+8	IERI Procedia	Influence of Catalysts on Water-Gas Shift Reaction and Hydrogen Recovery
+8	IERI Procedia	The Study on Flocculation Treating Wastewater from Domestic Animals and Poultry Breeding
+6	IERI Procedia	Lightning Threat Forecast Simulation Using the Schrodinger-electrostatic Algorithm
+6	IERI Procedia	Lightning Threat Forecast Simulation Using the Schrodinger-electrostatic Algorithm
+8	IERI Procedia	Research on Application of Design Semantics in Space Environment
+1	IERI Procedia	Framework for Evaluating Sustainability of Transport System in Megalopolis and its Application
+7	IERI Procedia	Intelligent Power Consumption Management Systems
+1	IERI Procedia	Window Query and Analysis on Massive Spatio-temporal Data
+1	IERI Procedia	Improving HPC Application Performance in Public Cloud
+6	IERI Procedia	Distributionally Extended Network-based Word Sense Disambiguation in Semantic Clustering of Polish Texts
+3	IERI Procedia	Improve Bayesian Network to Generating Vietnamese Sentence Reduction
+1	IERI Procedia	Extended Access Control and Recommendation Methods for Enterprise Knowledge Management System
+1	IERI Procedia	Extended Access Control and Recommendation Methods for Enterprise Knowledge Management System
+8	IERI Procedia	Numerical Solution for Kawahara Equation by Using Spectral Methods
+1	IERI Procedia	Contractor Selection in Gas Well-drilling Projects with Quality Evaluation Using Neuro-fuzzy Networks
+5	IERI Procedia	Ranking of Journals in Science and Technology Domain: A Novel and Computationally Lightweight Approach
+3	IERI Procedia	Human-robot Communication for Surveillance of Elderly People in Remote Distance
+7	IERI Procedia	Rapid Topology Design based on Shortest Path Betweenness for Virtual Network Construction
+0	IERI Procedia	From Single to Multi-clouds Computing Privacy and Fault Tolerance
+5	IERI Procedia	Scripting Language for Java Source Code Recognition
+2	IERI Procedia	Performance Analysis of Adaptive Beamforming Algorithms for Smart Antennas
+4	AASRI Procedia	Different Approaches for Implementing Quantum Search by Adiabatic Evolution
+2	AASRI Procedia	A Pupil Location Method for WIFI-based Video-oculography System
+1	AASRI Procedia	Amplitude-frequency Relationship for the Relativistic Oscillator
+3	AASRI Procedia	The Research of the Regional Financial Risk Early-Warning Model Integrating the Regression of Lagging Factors
+1	AASRI Procedia	Obstacle Detection and Classification in Dynamical Background
+7	AASRI Procedia	The Method of Energy Saving in Beam Pumping Unit Based on Genetic Algorithm
+3	AASRI Procedia	Research on Object-orientation-based Open Shape Model in Three-dimensional Space
+0	AASRI Procedia	Reliability of Distribution Network Components based on Failure Databases
+7	AASRI Procedia	Methodology of Establishing Holding Furnace Characteristic for Al-Si Alloys in Pressure Die-casting Process with Application
+2	AASRI Procedia	Exploitation and Application of Galloping Database based on PMS System
+1	AASRI Procedia	The Non-fragile Controller Design Based on Quadratic Performance Optimization
+6	AASRI Procedia	Nonlinear Predictive Control Using Fuzzy Hammerstein Model and Its Application to CSTR Process
+3	AASRI Procedia	An United Recursive Robot Dynamics Based on Screws
+6	AASRI Procedia	Tool-path Generation of Multi-axis Machining for Subdivision Surface
+5	AASRI Procedia	Adaptive SVR-HDMR Metamodeling Technique for High Dimensional Problems
+1	AASRI Procedia	Layered Metal-intermetallic Composites in Ti-Al System: Strength Under Static and Dynamic Load
+1	AASRI Procedia	Design Method for Virtual Network Attack and Defense Platform
+6	AASRI Procedia	A New Algorithm of GO Methodology Based on Minimal Path Set
+5	AASRI Procedia	Hidden Node Optimization for Extreme Learning Machine
+4	AASRI Procedia	Trend Prediction of FDI Based on the Intervention Model and ARIMA-GARCH-M Model
+5	AASRI Procedia	Tramway Track: A New Approach for Measuring the Transverse Profile of Worn-Out Rails
+6	AASRI Procedia	An Improved Median-based Otsu Image Thresholding Algorithm
+3	AASRI Procedia	Position Estimation Method for Prism Based Stereovision System
+1	AASRI Procedia	Research on Power Grid Reasoning Expert System Based on Ontology
+2	Case Studies in Construction Materials	Field experience of remote monitored and controlled CP systems
+0	Case Studies in Construction Materials	Application of flexi-wall in noise barriers renewal
+7	Case Studies in Construction Materials	Damages and causes on the structures during the October 23, 2011 Van earthquake in Turkey
+6	Case Studies in Nondestructive Testing and Evaluation	Evaluating asphalt concrete air void variation via GPR antenna array data
+2	Case Studies in Nondestructive Testing and Evaluation	Application of microCT to the non-destructive testing of an additive manufactured titanium component
+1	Case Studies in Nondestructive Testing and Evaluation	Simulation and measurement of ferromagnetic impurities in non-magnetic aeroengine turbine disks using fluxgate magnetometers
+5	Nuclear Materials and Energy	Thermally activated reaction–diffusion-controlled chemical bulk reactions of gases and solids
+5	Nuclear Materials and Energy	Conceptual study of ferromagnetic pebbles for heat exhaust in fusion reactors with short power decay length
+
+
+
+0	0.008*"based" + 0.007*"study" + 0.007*"properties" + 0.006*"modelling" + 0.005*"thin" + 0.005*"films" + 0.004*"x" + 0.004*"element" + 0.004*"analysis" + 0.004*"synchrotron"
+1	0.010*"based" + 0.010*"e" + 0.010*"system" + 0.008*"using" + 0.008*"design" + 0.006*"study" + 0.005*"gas" + 0.005*"modelling" + 0.005*"management" + 0.005*"high"
+2	0.011*"application" + 0.007*"polymer" + 0.006*"oxide" + 0.006*"based" + 0.006*"analysis" + 0.006*"systems" + 0.006*"computer" + 0.006*"toward" + 0.006*"spin" + 0.004*"polymerization"
+3	0.017*"analysis" + 0.009*"data" + 0.009*"using" + 0.009*"based" + 0.007*"model" + 0.006*"orientation" + 0.006*"liquid" + 0.005*"spatial" + 0.005*"assessment" + 0.005*"recognition"
+4	0.010*"n" + 0.008*"quantum" + 0.006*"based" + 0.006*"system" + 0.006*"nanotubes" + 0.006*"driven" + 0.006*"carbon" + 0.006*"walled" + 0.006*"model" + 0.006*"models"
+5	0.007*"phase" + 0.007*"approach" + 0.007*"proton" + 0.005*"fuel" + 0.005*"oxidation" + 0.004*"non" + 0.004*"quantum" + 0.004*"c" + 0.004*"new" + 0.004*"short"
+6	0.014*"based" + 0.010*"algorithm" + 0.009*"using" + 0.008*"simulation" + 0.008*"non" + 0.007*"hybrid" + 0.005*"gas" + 0.005*"extended" + 0.005*"process" + 0.005*"al"
+7	0.009*"application" + 0.008*"high" + 0.007*"using" + 0.007*"lepton" + 0.006*"transport" + 0.005*"spectral" + 0.005*"fluids" + 0.005*"power" + 0.005*"element" + 0.005*"adaptive"
+8	0.009*"using" + 0.007*"π" + 0.007*"p" + 0.006*"model" + 0.006*"modelling" + 0.006*"application" + 0.006*"simulation" + 0.006*"method" + 0.006*"research" + 0.006*"field"

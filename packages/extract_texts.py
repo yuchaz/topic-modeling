@@ -1,5 +1,5 @@
 from scienceie2017_scripts.util import parseXML
-import os
+import os, shutil
 import gensim
 
 TEXTS_DIR = './storage/texts/'
@@ -39,6 +39,7 @@ def extract_all_texts(dirpath=DATA_DIR):
     yield (extract_text_from_xml(fpath) for fpath in file_paths)
 
 def save_title_and_journal_name(data_dir=DATA_DIR, jt_dir=JOURNALNAME_TITLE_DIR):
+    kill_files_in_output_before_write(jt_dir)
     for data_filename in os.listdir(data_dir):
         if not data_filename.endswith(".xml"): continue
 
@@ -55,6 +56,7 @@ def save_title_and_journal_name(data_dir=DATA_DIR, jt_dir=JOURNALNAME_TITLE_DIR)
         jt_file.close()
 
 def save_texts(datapath=DATA_DIR, textpath=TEXTS_DIR):
+    kill_files_in_output_before_write(textpath)
     for dpath in os.listdir(datapath):
         if not dpath.endswith(".xml"): continue
         tpath = os.path.splitext(dpath)[0] + ".txt"
@@ -68,3 +70,13 @@ def save_texts(datapath=DATA_DIR, textpath=TEXTS_DIR):
         with open(output_file_name, 'w+') as tfile:
             tfile.write(extract_text_from_xml(os.path.join(DATA_DIR, dpath)))
         tfile.close()
+
+def kill_files_in_output_before_write(path):
+    for the_file in os.listdir(path):
+        file_path = os.path.join(path, the_file)
+        try:
+            if os.path.isfile(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path): shutil.rmtree(file_path)
+        except Exception as e:
+            print(e)

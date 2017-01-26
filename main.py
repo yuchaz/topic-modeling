@@ -1,5 +1,6 @@
 from packages.PublicationCorpus import PublicationCorpus
 from packages.extract_texts import extract_all_jtpair
+from packages.k_means import run_k_mean_and_get_optimal_k, run_k_mean_with_k
 import os
 import nltk
 import gensim
@@ -23,16 +24,26 @@ def main():
     tfidf = gensim.models.TfidfModel(corpus, normalize=True)
     # tfidf is a transformation from bow to tfidf.
     corpus_tfidf = tfidf[corpus]
-    lsi = gensim.models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=3)
+    lsi = gensim.models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=30)
     # transformation from tfidf to lsi
     corpus_lsi = lsi[corpus_tfidf]
-    max_l = [max(doc, key=lambda i: abs(i[1])) for doc in corpus_lsi]
+    optimal_clusters = run_k_mean_and_get_optimal_k(corpus_lsi)
+    lda = gensim.models.LdaModel(corpus, id2word=dictionary, num_topics=optimal_clusters)
+    corpus_lda = lda[corpus]
+    # run_k_mean_with_k(corpus_lda, optimal_clusters)
+
+
+    max_l = [max(doc, key=lambda i: abs(i[1])) for doc in corpus_lda]
     idx = 0
     for jname in extract_all_jtpair(DATA_DIR):
         print "{}\t{}".format(max_l[idx][0], jname)
         idx += 1
 
-    print lsi.print_topics()
-
+    print "\n\n"
+    for topic in lda.print_topics():
+        print '{}\t{}'.format(topic[0], topic[1].decode('utf-8'))
 if __name__ == '__main__':
+    import sys
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
     main()
