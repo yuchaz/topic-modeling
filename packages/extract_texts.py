@@ -1,9 +1,10 @@
 from scienceie2017_scripts.util import parseXML
 import os, shutil
 import gensim
+import packages.data_path_parser as dp
 
+DATA_DIR = dp.get_training_corpus()
 TEXTS_DIR = './storage/texts/'
-DATA_DIR = './scienceie2017_data/test/'
 JOURNALNAME_TITLE_DIR = './storage/journalname_title/'
 
 def extract_journalname_title_pair_from_xml(fpath):

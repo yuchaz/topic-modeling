@@ -1,5 +1,6 @@
 from packages.extract_texts import extract_all_jtpair
 from packages.k_means import run_k_mean_and_get_optimal_k, run_k_mean_with_k
+import packages.data_path_parser as dp
 import gensim
 import os
 
@@ -7,7 +8,7 @@ TEXT_DICT_PATH = './storage/models/text_corpus.dict'
 TEXT_CORPUS_PATH = './storage/models/text_corpus.mm'
 JT_DICT_PATH = './storage/models/jt_corpus.dict'
 JT_CORPUS_PATH = './storage/models/jt_corpus.mm'
-DATA_DIR = './scienceie2017_data/train/'
+DATA_DIR = dp.get_training_corpus()
 LDA_DIR = './storage/models/'
 
 

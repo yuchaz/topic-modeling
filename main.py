@@ -1,4 +1,5 @@
 from packages.PublicationCorpus import PublicationCorpus
+import packages.data_path_parser as dp
 import os
 import nltk
 import gensim
@@ -6,7 +7,7 @@ import gensim
 TEXT_DIR = './storage/texts/'
 JT_DIR= './storage/journalname_title/'
 MODELS_DIR = './storage/models'
-DATA_DIR = './scienceie2017_data/train/'
+DATA_DIR = dp.get_training_corpus()
 
 def main():
     stoplist = set(nltk.corpus.stopwords.words("english"))
