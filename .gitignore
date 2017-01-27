@@ -5,3 +5,5 @@ scienceie2017_data
 
 storage/*
 storage/**/*
+
+*.ini
