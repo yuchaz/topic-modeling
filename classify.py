@@ -30,10 +30,12 @@ def main():
     # optimal_clusters = run_k_mean_and_get_optimal_k(corpus_lsi, 30)
 
     lda_topic_3 = gensim.models.LdaModel(corpus_tfidf, id2word=dictionary, num_topics=3)
+    lda_topic_6 = gensim.models.LdaModel(corpus_tfidf, id2word=dictionary, num_topics=6)
     lda_topic_8 = gensim.models.LdaModel(corpus_tfidf, id2word=dictionary, num_topics=8)
     lda_topic_10 = gensim.models.LdaModel(corpus_tfidf, id2word=dictionary, num_topics=10)
 
     lda_jt_3 = gensim.models.LdaModel(corpus_jt_tfidf, id2word=dictionary_jt, num_topics=3)
+    lda_jt_6 = gensim.models.LdaModel(corpus_jt_tfidf, id2word=dictionary_jt, num_topics=6)
     lda_jt_8 = gensim.models.LdaModel(corpus_jt_tfidf, id2word=dictionary_jt, num_topics=8)
     lda_jt_10 = gensim.models.LdaModel(corpus_jt_tfidf, id2word=dictionary_jt, num_topics=10)
 
@@ -49,10 +51,12 @@ def main():
 
     # lda.save(LDA_PATH)
     lda_topic_3.save(os.path.join(LDA_DIR, 'topics_3.lda'))
+    lda_topic_6.save(os.path.join(LDA_DIR, 'topics_6.lda'))
     lda_topic_8.save(os.path.join(LDA_DIR, 'topics_8.lda'))
     lda_topic_10.save(os.path.join(LDA_DIR, 'topics_10.lda'))
 
     lda_jt_3.save(os.path.join(LDA_DIR, 'jt_3.lda'))
+    lda_jt_6.save(os.path.join(LDA_DIR, 'jt_6.lda'))
     lda_jt_8.save(os.path.join(LDA_DIR, 'jt_8.lda'))
     lda_jt_10.save(os.path.join(LDA_DIR, 'jt_10.lda'))
 

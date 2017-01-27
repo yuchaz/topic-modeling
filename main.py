@@ -12,7 +12,11 @@ def main():
     stoplist = set(nltk.corpus.stopwords.words("english"))
     journal_stoplist = set(
         """letters journal annals international current opinion
-           equilibria fig eq et al ev nm gev"""
+           equilibria fig eq et al ev nm gev using application model
+           model new research applied study effect high low analysis
+           relationship background modeling one two three four five six
+           seven eight nine ten hundred thousand million billion based
+           design equations equation figure figures"""
         .split())
     stoplist.update(journal_stoplist)
 
