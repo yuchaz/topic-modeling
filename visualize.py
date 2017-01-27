@@ -5,7 +5,7 @@ from gensim import corpora, models
 text_lda = {
     'corpus':'./storage/models/text_corpus.mm',
     'dict': './storage/models/text_corpus.dict',
-    'lda_model': './storage/models/topics_10.lda'
+    'lda_model': './storage/models/topics_3.lda'
 }
 
 jt_lda = {

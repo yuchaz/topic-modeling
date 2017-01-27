@@ -1,5 +1,6 @@
 import gensim
 import os
+import unicodedata as ud
 
 class PublicationCorpus(object):
     def __init__(self, homedir, stoplist):
@@ -16,7 +17,6 @@ def extract_from_texts(homedir, stoplist):
         with open(os.path.join(homedir, text_name)) as text_file:
             texts = text_file.read()
         text_file.close()
-        yield (token for token in
-            gensim.utils.tokenize(texts, lower=True, deacc=True,
-                                  errors="ignore")
+        yield (token.lower() if sum(1 for c in token if ud.category(c)=='Lu')==1 else token for token in
+            gensim.utils.tokenize(texts, deacc=True, errors="ignore")
             if token not in stoplist and len(token) > 2)

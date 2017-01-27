@@ -3,7 +3,7 @@ import os, shutil
 import gensim
 
 TEXTS_DIR = './storage/texts/'
-DATA_DIR = './scienceie2017_data/train/'
+DATA_DIR = './scienceie2017_data/test/'
 JOURNALNAME_TITLE_DIR = './storage/journalname_title/'
 
 def extract_journalname_title_pair_from_xml(fpath):
