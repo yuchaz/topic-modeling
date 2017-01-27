@@ -10,7 +10,7 @@ DATA_DIR = './scienceie2017_data/train/'
 
 def main():
     stoplist = set(nltk.corpus.stopwords.words("english"))
-    journal_stoplist = set('letters journal annals international current opinion equilibria'.split())
+    journal_stoplist = set('letters journal annals international current opinion equilibria fig eq'.split())
     stoplist.update(journal_stoplist)
 
     text_corpus = PublicationCorpus(TEXT_DIR, stoplist)
