@@ -31,15 +31,15 @@ def run_k_mean_and_get_optimal_k(corpus_lsi, initial_dim):
     data = convert_lda_to_vector(corpus_lsi, initial_dim)
     return find_elbow_point(data)
 
-def run_k_mean_with_k(corpus_lda, k):
-    data_to_fit = convert_lda_to_vector(corpus_lda, k)
+def run_k_mean_with_k(corpus_lda, lda_dimensions, k):
+    data_to_fit = convert_lda_to_vector(corpus_lda, lda_dimensions)
     kmeans = KMeans(n_clusters=k, random_state=0).fit(data_to_fit)
     return kmeans.labels_
 
-def convert_lda_to_vector(corpus_lda, num_topics):
+def convert_lda_to_vector(corpus_lda, lda_dimensions):
     vectors = []
     for token_vector in corpus_lda:
-        vector = [0]*num_topics
+        vector = [0]*lda_dimensions
         for k,v in token_vector:
             vector[k] = v
         vectors.append(vector)
