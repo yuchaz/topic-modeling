@@ -10,11 +10,17 @@ DATA_DIR = './scienceie2017_data/train/'
 
 def main():
     stoplist = set(nltk.corpus.stopwords.words("english"))
-    journal_stoplist = set('letters journal annals international current opinion equilibria fig eq'.split())
+    journal_stoplist = set(
+        """letters journal annals international current opinion
+           equilibria fig eq et al ev nm gev"""
+        .split())
     stoplist.update(journal_stoplist)
 
     text_corpus = PublicationCorpus(TEXT_DIR, stoplist)
     jt_corpus = PublicationCorpus(JT_DIR, stoplist)
+
+    text_corpus.dictionary.filter_extremes(no_below=3, no_above=0.5)
+    jt_corpus.dictionary.filter_extremes(no_below=3, no_above=0.5)
 
     text_corpus.dictionary.save(os.path.join(MODELS_DIR, "text_corpus.dict"))
     gensim.corpora.MmCorpus.serialize(os.path.join(MODELS_DIR, "text_corpus.mm"),
@@ -25,4 +31,7 @@ def main():
                                       jt_corpus)
 
 if __name__ == '__main__':
+    import sys
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
     main()

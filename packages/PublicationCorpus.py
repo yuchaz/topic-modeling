@@ -1,6 +1,5 @@
 import gensim
 import os
-from nltk.stem.porter import PorterStemmer
 
 class PublicationCorpus(object):
     def __init__(self, homedir, stoplist):
@@ -20,4 +19,4 @@ def extract_from_texts(homedir, stoplist):
         yield (token for token in
             gensim.utils.tokenize(texts, lower=True, deacc=True,
                                   errors="ignore")
-            if token not in stoplist and len(token) != 1)
+            if token not in stoplist and len(token) > 2)
