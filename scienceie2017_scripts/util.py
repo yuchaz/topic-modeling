@@ -30,6 +30,8 @@ class PubHandler(xml.sax.ContentHandler):
         self.inabstract = False
         self.textbuilder_title = []
         self.intitle = False
+        self.injournalname = False
+        self.textbuilder_journalname = []
 
 
    def startElement(self, tag, attributes):
@@ -45,6 +47,8 @@ class PubHandler(xml.sax.ContentHandler):
             self.inabstract = True
         if tag == "ce:title" or tag == "dc:title":
             self.intitle = True
+        if tag == 'xocs:srctitle':
+            self.injournalname = True
 
 
    def endElement(self, tag):
@@ -73,15 +77,20 @@ class PubHandler(xml.sax.ContentHandler):
                para = "".join(self.textbuilder_title)
                self.title = para
                self.textbuilder_title = []
-
+        if tag == 'xocs:srctitle':
+            self.injournalname = False
+            if len(self.textbuilder_journalname) > 0:
+                para = "".join(self.textbuilder_journalname)
+                self.journalname = para
+                textbuilder_journalname = []
 
    def characters(self, content):
         # Call when a character is read
         if self.CurrentData == "dc:identifier":
             self.id = content
         # elif self.CurrentData == "prism:publicationName":
-        elif self.CurrentData == "xocs:srctitle":
-            self.journalname = content
+        elif self.injournalname == True:
+            self.textbuilder_journalname.append(content)
         elif self.CurrentData == "openaccess":
             self.openaccess = content
         elif self.CurrentData == "prism:coverDate":

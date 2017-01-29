@@ -7,6 +7,16 @@ DATA_DIR = dp.get_training_corpus()
 TEXTS_DIR = './storage/texts/'
 JOURNALNAME_TITLE_DIR = './storage/journalname_title/'
 
+def extract_journalname_from_xml(fpath):
+    Handler = parseXML(fpath)
+    return Handler.journalname
+
+def extract_all_journalname(dirpath=DATA_DIR):
+    file_paths = os.listdir(dirpath)
+    for fn in file_paths:
+        if not fn.endswith('.xml'): continue
+        yield extract_journalname_from_xml(os.path.join(dirpath, fn))
+
 def extract_journalname_title_pair_from_xml(fpath):
     Handler = parseXML(fpath)
     return (Handler.journalname + "\t" + Handler.title).encode('utf-8')
