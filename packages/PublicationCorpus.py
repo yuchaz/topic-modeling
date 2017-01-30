@@ -2,6 +2,18 @@ import gensim
 import os
 import unicodedata as ud
 
+class TestCorpus(object):
+    def __init__(self, homedir, stoplist, dictionary):
+        self.homedir = homedir
+        self.stoplist = stoplist
+        self.dictionary = dictionary
+        self.journal_categories = []
+
+    def __iter__(self):
+        for tokens, journal_category in extract_from_texts(self.homedir, self.stoplist):
+            self.journal_categories.append(journal_category)
+            yield self.dictionary.doc2bow(tokens)
+
 class PublicationCorpus(object):
     def __init__(self, homedir, stoplist):
         self.homedir = homedir

@@ -5,8 +5,8 @@ import packages.data_path_parser as dp
 from packages.csv_parser import parse_csv
 
 DATA_DIR = dp.get_training_corpus()
-TEXTS_DIR = './storage/texts/'
-JOURNALNAME_TITLE_DIR = './storage/journalname_title/'
+TEXTS_DIR = './storage/texts/train/'
+JOURNALNAME_TITLE_DIR = './storage/journalname_title/train/'
 
 map_journalname_to_category = parse_csv()
 
@@ -77,7 +77,7 @@ def save_texts(datapath=DATA_DIR, textpath=TEXTS_DIR):
     for dpath in os.listdir(datapath):
         if not dpath.endswith(".xml"): continue
         tpath = os.path.splitext(dpath)[0] + ".txt"
-        output_file_name = os.path.join(TEXTS_DIR, tpath)
+        output_file_name = os.path.join(textpath, tpath)
         if not os.path.exists(os.path.dirname(output_file_name)):
             try:
                 os.makedirs(os.path.dirname(output_file_name))
