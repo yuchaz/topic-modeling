@@ -1,7 +1,7 @@
 from packages.extract_texts import save_texts, save_title_and_journal_name
 import packages.data_path_parser as dp
 
-train_raw_data_path = dp.get_test_corpus()
+train_raw_data_path = dp.get_training_corpus()
 dev_raw_data_path = dp.get_dev_corpus()
 test_raw_data_path = dp.get_test_corpus()
 

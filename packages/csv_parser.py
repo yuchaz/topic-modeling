@@ -1,9 +1,9 @@
-import csv
-import json
+import csv, json, os
 
-annotated_csv_path = './data/journal_list_by_subject.csv'
-annotated_json_path = './data/journal_list_by_subject.json'
-
+filename = 'journal_list_by_subject_three_class'
+data_dir = './data'
+annotated_csv_path = os.path.join(data_dir, filename+'.csv')
+annotated_json_path = os.path.join(data_dir, filename+'.json')
 
 class AnnotatedJournalEncoder(json.JSONEncoder):
     def default(self, o):
