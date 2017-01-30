@@ -8,3 +8,6 @@ storage/**/*
 
 *.ini
 journal_name_list.txt
+
+!.gitkeep
+!**/*/.gitkeep
