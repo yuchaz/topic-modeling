@@ -2,10 +2,13 @@ from scienceie2017_scripts.util import parseXML
 import os, shutil
 import gensim
 import packages.data_path_parser as dp
+from packages.csv_parser import parse_csv
 
 DATA_DIR = dp.get_training_corpus()
 TEXTS_DIR = './storage/texts/'
 JOURNALNAME_TITLE_DIR = './storage/journalname_title/'
+
+map_journalname_to_category = parse_csv()
 
 def extract_journalname_from_xml(fpath):
     Handler = parseXML(fpath)
@@ -63,7 +66,10 @@ def save_title_and_journal_name(data_dir=DATA_DIR, jt_dir=JOURNALNAME_TITLE_DIR)
                 if exc.errno != errno.EEXIST: raise
         with open (jt_path, 'w+') as jt_file:
             # jt_file.write(extract_journalname_title_pair_from_xml(os.path.join(data_dir, data_filename)))
-            jt_file.write(extract_paper_title_from_xml(os.path.join(data_dir, data_filename)))
+            to_write = u'{}\t\t\t{}'.format(extract_paper_title_from_xml(os.path.join(data_dir, data_filename)),
+                map_journalname_to_category.get(
+                    extract_journalname_from_xml(os.path.join(data_dir, data_filename))).category)
+            jt_file.write(to_write)
         jt_file.close()
 
 def save_texts(datapath=DATA_DIR, textpath=TEXTS_DIR):
@@ -79,7 +85,10 @@ def save_texts(datapath=DATA_DIR, textpath=TEXTS_DIR):
                 if exc.errno != errno.EEXIST:
                     raise
         with open(output_file_name, 'w+') as tfile:
-            tfile.write(extract_text_from_xml(os.path.join(DATA_DIR, dpath)))
+            to_write = u'{}\t\t\t{}'.format(extract_text_from_xml(os.path.join(datapath, dpath)),
+                map_journalname_to_category.get(
+                    extract_journalname_from_xml(os.path.join(datapath, dpath))).category)
+            tfile.write(to_write)
         tfile.close()
 
 def kill_files_in_output_before_write(path):

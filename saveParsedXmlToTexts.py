@@ -5,4 +5,7 @@ def main():
     save_title_and_journal_name()
 
 if __name__ == '__main__':
+    import sys
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
     main()

@@ -34,6 +34,12 @@ def main():
     jt_corpus.dictionary.save(os.path.join(MODELS_DIR, "jt_corpus.dict"))
     gensim.corpora.MmCorpus.serialize(os.path.join(MODELS_DIR, "jt_corpus.mm"),
                                       jt_corpus)
+    with open('./storage/models/text_corpus.classify', 'w+') as textf:
+        textf.write('\n'.join(text_corpus.journal_categories))
+    textf.close()
+    with open('./storage/models/jt_corpus.classify', 'w+') as jtf:
+        jtf.write('\n'.join(jt_corpus.journal_categories))
+    jtf.close()
 
 if __name__ == '__main__':
     import sys
