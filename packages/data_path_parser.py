@@ -68,3 +68,6 @@ def get_annotated_dev_set():
 
 def get_annotated_test_set():
     return annotated_text_test()
+
+def get_models_dir():
+    return MODELS_DIR

@@ -73,7 +73,7 @@ def parse_xml_to_annotated_data(xml_inpath, annotated_outpath, extract_method):
 
 def kill_files_in_output_before_write(path):
     for the_file in os.listdir(path):
-        if not the_file.endswith('.txt'): continue
+        if the_file == '.gitkeep': continue
         file_path = os.path.join(path, the_file)
         try:
             if os.path.isfile(file_path):

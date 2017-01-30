@@ -28,6 +28,8 @@ class PublicationCorpus(object):
 
 def extract_from_texts(homedir, stoplist):
     for text_name in os.listdir(homedir):
+        if text_name == '.gitkeep': continue
+
         with open(os.path.join(homedir, text_name)) as text_file:
             texts_raw = text_file.read()
         text_file.close()
