@@ -33,58 +33,19 @@ def main():
     # dictionary_jt = gensim.corpora.Dictionary.load(JT_DICT_PATH)
     # corpus_jt = gensim.corpora.MmCorpus(JT_CORPUS_PATH)
 
-    # tfidf = gensim.models.TfidfModel(corpus, normalize=True)
-    # corpus_tfidf = tfidf[corpus]
-    train_corpus_sparse = gensim.matutils.corpus2csc(train_corpus).transpose()
+    tfidf_train = gensim.models.TfidfModel(train_corpus, normalize=True)
+    train_corpus_tfidf = tfidf_train[train_corpus]
+
+    tfidf_test = gensim.models.TfidfModel(test_corpus, normalize=True)
+    test_corpus_tfidf = tfidf_test[test_corpus]
+
+    train_corpus_sparse = gensim.matutils.corpus2csc(train_corpus_tfidf).transpose()
     topic_classifier = SVC()
     topic_classifier.fit(train_corpus_sparse, train_categories)
-    # import pdb; pdb.set_trace()
-    test_corpus_sparse = gensim.matutils.corpus2csc(corpus=test_corpus,num_terms=train_corpus_sparse.shape[1]).transpose()
-    predicted_categories = topic_classifier.predict(test_corpus_sparse)
-    print sum(1 for i in range(len(predicted_categories)) if predicted_categories[i]==test_categories[i])
 
-    # tfidf_jt = gensim.models.TfidfModel(corpus_jt, normalize=True)
-    # corpus_jt_tfidf = tfidf_jt[corpus_jt]
-
-    # lsi = gensim.models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=30)
-    # corpus_lsi = lsi[corpus_tfidf]
-    #
-    # optimal_clusters = run_k_mean_and_get_optimal_k(corpus_lsi, 30)
-
-    # lda_topic_3 = gensim.models.LdaModel(corpus_tfidf, id2word=dictionary, num_topics=3)
-    # lda_topic_6 = gensim.models.LdaModel(corpus_tfidf, id2word=dictionary, num_topics=6)
-    # lda_topic_8 = gensim.models.LdaModel(corpus_tfidf, id2word=dictionary, num_topics=8)
-    # lda_topic_10 = gensim.models.LdaModel(corpus_tfidf, id2word=dictionary, num_topics=10)
-    #
-    # lda_jt_3 = gensim.models.LdaModel(corpus_jt_tfidf, id2word=dictionary_jt, num_topics=3)
-    # lda_jt_6 = gensim.models.LdaModel(corpus_jt_tfidf, id2word=dictionary_jt, num_topics=6)
-    # lda_jt_8 = gensim.models.LdaModel(corpus_jt_tfidf, id2word=dictionary_jt, num_topics=8)
-    # lda_jt_10 = gensim.models.LdaModel(corpus_jt_tfidf, id2word=dictionary_jt, num_topics=10)
-    #
-    # corpus_lda = lda[corpus_tfidf]
-    # labels = run_k_mean_with_k(corpus_lda,100, 3)
-
-    # max_l = [max(doc, key=lambda i: abs(i[1])) for doc in corpus_lda]
-    # idx = 0
-    # for jname in extract_all_jtpair(DATA_DIR):
-    #     print "{}\t{}".format(max_l[idx][0], jname)
-    #     # print "{}\t{}".format(labels[idx], jname)
-    #     idx += 1
-
-    # lda.save(LDA_PATH)
-    # lda_topic_3.save(os.path.join(LDA_DIR, 'topics_3.lda'))
-    # lda_topic_6.save(os.path.join(LDA_DIR, 'topics_6.lda'))
-    # lda_topic_8.save(os.path.join(LDA_DIR, 'topics_8.lda'))
-    # lda_topic_10.save(os.path.join(LDA_DIR, 'topics_10.lda'))
-    #
-    # lda_jt_3.save(os.path.join(LDA_DIR, 'jt_3.lda'))
-    # lda_jt_6.save(os.path.join(LDA_DIR, 'jt_6.lda'))
-    # lda_jt_8.save(os.path.join(LDA_DIR, 'jt_8.lda'))
-    # lda_jt_10.save(os.path.join(LDA_DIR, 'jt_10.lda'))
-
-
-
-
+    test_corpus_sparse = gensim.matutils.corpus2csc(corpus=test_corpus_tfidf,num_terms=train_corpus_sparse.shape[1]).transpose()
+    predicted_categories = topic_classifier.predict(train_corpus_sparse)
+    print sum(1 for i in range(len(predicted_categories)) if predicted_categories[i]==train_categories[i])
 
 if __name__ == '__main__':
     import sys
