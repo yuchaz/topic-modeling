@@ -10,7 +10,7 @@ import numpy as np
 models_dir = dp.get_models_dir()
 training_corpus_name = 'training_corpus'
 evaluation_corpus_name = 'evaluation_corpus'
-LDA_topics = 200
+LDA_topics = 100
 
 def main():
     train_dictionary, training_corpus, training_categories = get_dictionary_and_corpus(training_corpus_name)
@@ -19,21 +19,20 @@ def main():
     tfidf_train, training_corpus_tfidf = calc_tfidf_matrix(training_corpus)
     tfidf_eval, evaluation_corpus_tfidf = calc_tfidf_matrix(evaluation_corpus)
 
-    lda_train, training_corpus_lda = transform_to_LDA(training_corpus, train_dictionary)
-    lda_eval, evaluation_corpus_lda = transform_to_LDA(evaluation_corpus, train_dictionary)
+    # lda_train, training_corpus_lda = transform_to_LDA(training_corpus, train_dictionary)
+    # lda_eval, evaluation_corpus_lda = transform_to_LDA(evaluation_corpus, train_dictionary)
 
     # ===================
     # training_corpus_sparse = gensim.matutils.corpus2csc(training_corpus).transpose()
     # evaluation_corpus_sparse = gensim.matutils.corpus2csc(corpus=evaluation_corpus,num_terms=training_corpus_sparse.shape[1]).transpose()
-    # training_corpus_sparse = gensim.matutils.corpus2csc(training_corpus_tfidf).transpose()
-    # evaluation_corpus_sparse = gensim.matutils.corpus2csc(corpus=evaluation_corpus_tfidf,num_terms=training_corpus_sparse.shape[1]).transpose()
-    training_corpus_sparse = gensim.matutils.corpus2csc(training_corpus_lda).transpose()
-    evaluation_corpus_sparse = gensim.matutils.corpus2csc(corpus=evaluation_corpus_lda,num_terms=training_corpus_sparse.shape[1]).transpose()
-
+    training_corpus_sparse = gensim.matutils.corpus2csc(training_corpus_tfidf).transpose()
+    evaluation_corpus_sparse = gensim.matutils.corpus2csc(corpus=evaluation_corpus_tfidf,num_terms=training_corpus_sparse.shape[1]).transpose()
+    # training_corpus_sparse = gensim.matutils.corpus2csc(training_corpus_lda).transpose()
+    # evaluation_corpus_sparse = gensim.matutils.corpus2csc(corpus=evaluation_corpus_lda,num_terms=training_corpus_sparse.shape[1]).transpose()
     eval_pair = evaluation_corpus_sparse, evaluation_categories
     train_pair = training_corpus_sparse, training_categories
 
-    # score = labeling_corpus(training_corpus_sparse, training_categories, *train_pair)
+    labeling_corpus(training_corpus_sparse, training_categories, *train_pair)
     labeling_corpus(training_corpus_sparse, training_categories, *eval_pair)
 
 def get_dictionary_and_corpus(filename):
@@ -45,14 +44,12 @@ def get_dictionary_and_corpus(filename):
     return dictionary, corpus, categories
 
 def labeling_corpus(training_corpus, training_categories, evaluation_corpus, evaluation_categories):
-    # param_grid = {'C':[300,350,400,500,550,600], 'kernel':['rbf'],'decision_function_shape':['ovo','ovr']}
-    # svc = svm.SVC(decision_function_shape='ovo', C=345)
+    param_grid = {'C':[10000,30000,50000,100000], 'gamma':[0,1e-3,1e-2,1e-1,1,10,100,'auto']}
+    svc = svm.SVC(decision_function_shape='ovo', C=10000, gamma=1e-1)
     # nb = naive_bayes.MultinomialNB(alpha=1)
-    # param_grid = {'alpha':[0,1e-5,1e-4,1e-3,1e-2,1e-1,1,10,100,1000]}
-    nn = neural_network.MLPClassifier(hidden_layer_sizes=(100,30,100),learning_rate_init=1e-2)
-    param_grid = {'learning_rate_init':[1e-5,1e-4,1e-3,1e-2,1e-1], 'hidden_layer_sizes':[(100,),(100,30),(100,30,100)]}
+    # param_grid = {'alpha':[8e-4,9e-4,1e-3,2e-3,3e-3,5e-3,7e-3]}
 
-    topic_classifier = model_selection.GridSearchCV(estimator=nn, param_grid=param_grid,n_jobs=-1, cv=10)
+    topic_classifier = model_selection.GridSearchCV(estimator=svc, param_grid=param_grid,n_jobs=-1, cv=10)
     topic_classifier.fit(training_corpus, training_categories)
     print topic_classifier.score(evaluation_corpus, evaluation_categories)
     print topic_classifier.predict(evaluation_corpus)
