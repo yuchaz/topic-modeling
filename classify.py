@@ -33,7 +33,8 @@ def main():
     eval_pair = evaluation_corpus_sparse, evaluation_categories
     train_pair = training_corpus_sparse, training_categories
 
-    score = labeling_corpus(training_corpus_sparse, training_categories, *train_pair)
+    # score = labeling_corpus(training_corpus_sparse, training_categories, *train_pair)
+    score = labeling_corpus(training_corpus_sparse, training_categories, *eval_pair)
     print score
 
 def get_dictionary_and_corpus(filename):
@@ -45,10 +46,10 @@ def get_dictionary_and_corpus(filename):
     return dictionary, corpus, categories
 
 def labeling_corpus(training_corpus, training_categories, evaluation_corpus, evaluation_categories):
-    topic_classifier = svm.SVC(decision_function_shape='ovr')
+    topic_classifier = svm.SVC(decision_function_shape='ovo', C=756, random_state=30)
     topic_classifier.fit(training_corpus, training_categories)
     predicted_categories = topic_classifier.predict(evaluation_corpus)
-    import pdb; pdb.set_trace()
+    print predicted_categories
     return float(sum(1 for i in range(len(predicted_categories)) if predicted_categories[i]==evaluation_categories[i]))/len(predicted_categories)
 
 def calc_tfidf_matrix(bow_corpus):
