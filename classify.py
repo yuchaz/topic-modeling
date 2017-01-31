@@ -4,13 +4,13 @@ import packages.data_path_parser as dp
 import gensim
 import os
 from scipy.sparse import csr_matrix
-from sklearn import svm
+from sklearn import svm, model_selection
 import numpy as np
 
 models_dir = dp.get_models_dir()
 training_corpus_name = 'training_corpus'
 evaluation_corpus_name = 'evaluation_corpus'
-LDA_topics = 100
+LDA_topics = 50
 
 def main():
     train_dictionary, training_corpus, training_categories = get_dictionary_and_corpus(training_corpus_name)
@@ -46,11 +46,16 @@ def get_dictionary_and_corpus(filename):
     return dictionary, corpus, categories
 
 def labeling_corpus(training_corpus, training_categories, evaluation_corpus, evaluation_categories):
-    topic_classifier = svm.SVC(decision_function_shape='ovo', C=756, random_state=30)
+    param_grid = {'C':[500,600,700,800,900,1000], 'kernel':['rbf'],'decision_function_shape':['ovo','ovr']}
+
+    svc = svm.SVC(decision_function_shape='ovo', C=756)
+    topic_classifier = model_selection.GridSearchCV(estimator=svc, param_grid=param_grid,n_jobs=-1)
     topic_classifier.fit(training_corpus, training_categories)
-    predicted_categories = topic_classifier.predict(evaluation_corpus)
-    print predicted_categories
-    return float(sum(1 for i in range(len(predicted_categories)) if predicted_categories[i]==evaluation_categories[i]))/len(predicted_categories)
+    print topic_classifier.score(evaluation_corpus, evaluation_categories)
+    print topic_classifier.predict(evaluation_corpus)
+    print topic_classifier.best_params_
+    print topic_classifier.best_score_
+    import pdb; pdb.set_trace()
 
 def calc_tfidf_matrix(bow_corpus):
     tfidf = gensim.models.TfidfModel(bow_corpus, normalize=True)

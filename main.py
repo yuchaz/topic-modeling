@@ -5,8 +5,8 @@ import nltk
 import gensim
 from packages.extract_texts import kill_files_in_output_before_write
 
-annotated_data_for_training = dp.annotated_text_training()
-annotated_data_for_evaluation = dp.annotated_text_dev()
+annotated_data_for_training = dp.get_annotated_training_set()
+annotated_data_for_evaluation = dp.get_annotated_dev_set()
 models_dir = dp.get_models_dir()
 
 def main():
