@@ -4,13 +4,13 @@ import packages.data_path_parser as dp
 import gensim
 import os
 from scipy.sparse import csr_matrix
-from sklearn import svm, model_selection
+from sklearn import svm, model_selection, naive_bayes, ensemble, neural_network
 import numpy as np
 
 models_dir = dp.get_models_dir()
 training_corpus_name = 'training_corpus'
 evaluation_corpus_name = 'evaluation_corpus'
-LDA_topics = 50
+LDA_topics = 200
 
 def main():
     train_dictionary, training_corpus, training_categories = get_dictionary_and_corpus(training_corpus_name)
@@ -34,8 +34,7 @@ def main():
     train_pair = training_corpus_sparse, training_categories
 
     # score = labeling_corpus(training_corpus_sparse, training_categories, *train_pair)
-    score = labeling_corpus(training_corpus_sparse, training_categories, *eval_pair)
-    print score
+    labeling_corpus(training_corpus_sparse, training_categories, *eval_pair)
 
 def get_dictionary_and_corpus(filename):
     dictionary = gensim.corpora.Dictionary.load(os.path.join(models_dir, filename+'.dict'))
@@ -46,23 +45,26 @@ def get_dictionary_and_corpus(filename):
     return dictionary, corpus, categories
 
 def labeling_corpus(training_corpus, training_categories, evaluation_corpus, evaluation_categories):
-    param_grid = {'C':[500,600,700,800,900,1000], 'kernel':['rbf'],'decision_function_shape':['ovo','ovr']}
+    # param_grid = {'C':[300,350,400,500,550,600], 'kernel':['rbf'],'decision_function_shape':['ovo','ovr']}
+    # svc = svm.SVC(decision_function_shape='ovo', C=345)
+    # nb = naive_bayes.MultinomialNB(alpha=1)
+    # param_grid = {'alpha':[0,1e-5,1e-4,1e-3,1e-2,1e-1,1,10,100,1000]}
+    nn = neural_network.MLPClassifier(hidden_layer_sizes=(100,30,100),learning_rate_init=1e-2)
+    param_grid = {'learning_rate_init':[1e-5,1e-4,1e-3,1e-2,1e-1], 'hidden_layer_sizes':[(100,),(100,30),(100,30,100)]}
 
-    svc = svm.SVC(decision_function_shape='ovo', C=756)
-    topic_classifier = model_selection.GridSearchCV(estimator=svc, param_grid=param_grid,n_jobs=-1)
+    topic_classifier = model_selection.GridSearchCV(estimator=nn, param_grid=param_grid,n_jobs=-1, cv=10)
     topic_classifier.fit(training_corpus, training_categories)
     print topic_classifier.score(evaluation_corpus, evaluation_categories)
     print topic_classifier.predict(evaluation_corpus)
     print topic_classifier.best_params_
     print topic_classifier.best_score_
-    import pdb; pdb.set_trace()
 
 def calc_tfidf_matrix(bow_corpus):
     tfidf = gensim.models.TfidfModel(bow_corpus, normalize=True)
     return tfidf, tfidf[bow_corpus]
 
-def transform_to_LDA(bow_corpus, dictionary):
-    lda = gensim.models.LdaModel(bow_corpus, id2word=dictionary, num_topics=LDA_topics)
+def transform_to_LDA(bow_corpus, dictionary, num_topics=LDA_topics):
+    lda = gensim.models.LdaModel(bow_corpus, id2word=dictionary, num_topics=num_topics)
     return lda, lda[bow_corpus]
 
 if __name__ == '__main__':
