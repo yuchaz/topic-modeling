@@ -20,7 +20,7 @@ class ClassificationCorpus(object):
             self.transformed_corpus, num_terms=num_terms).transpose()
 
     def transform(self,corpus):
-        if not self.transformer:
+        if self.transformer:
             return self.transformer[corpus]
         else:
             return corpus
