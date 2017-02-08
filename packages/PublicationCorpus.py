@@ -38,9 +38,8 @@ class PublicationCorpus(object):
         mi_lst = [defaultdict(lambda:1.0) for i in range(3)]
         term_list = self.dictionary.keys()
         for doc, journal_category in all_corpus:
-            for term in term_list:
-                if self.dictionary.get(term) in doc:
-                    dict_lst[int(journal_category)][term] += 1
+            for term, fqcy in self.dictionary.doc2bow(doc):
+                dict_lst[int(journal_category)][term] += 1
 
         term_count = {term: sum(dict_lst[jt][term] for jt in range(3)) for term in term_list}
         class_count = {clss: sum(dict_lst[clss][term] for term in term_list) for clss in range(3)}
@@ -88,23 +87,3 @@ def extract_from_texts(homedir, stoplist):
 def extract_for_dict(homedirs, stoplist):
     for tokens, jn in itertools.chain(*[extract_from_texts(homedir, stoplist) for homedir in homedirs]):
         yield tokens
-
-class SklearnCorpus(object):
-    def __init__(self, homedir):
-        self.homedir = homedir
-        self.journal_categories = []
-
-    def __iter__(self):
-        for tokens, journal_category in sklearn_extract_from_texts(self.homedir):
-            self.journal_categories.append(journal_category)
-            yield tokens
-
-def sklearn_extract_from_texts(homedir):
-    for text_name in os.listdir(homedir):
-        if text_name == '.gitkeep': continue
-
-        with open(os.path.join(homedir, text_name)) as text_file:
-            texts_raw = text_file.read()
-        text_file.close()
-        texts, journal_category = texts_raw.split('\t\t\t')
-        yield texts, journal_category

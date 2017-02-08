@@ -5,8 +5,8 @@ import nltk
 import gensim
 from packages.extract_texts import kill_files_in_output_before_write
 
-annotated_data_for_training = [dp.get_annotated_training_set(),dp.get_annotated_dev_set()]
-annotated_data_for_evaluation = dp.get_annotated_test_set()
+annotated_data_for_training = [dp.get_annotated_training_set()]
+annotated_data_for_evaluation = dp.get_annotated_dev_set()
 models_dir = dp.get_models_dir()
 
 def main():
@@ -14,7 +14,6 @@ def main():
     stoplist = set(nltk.corpus.stopwords.words("english"))
 
     training_corpus = PublicationCorpus(stoplist,*annotated_data_for_training)
-    training_corpus.dictionary.filter_extremes(no_below=1, no_above=0.9)
     training_corpus.dictionary.save(os.path.join(models_dir, "training_corpus.dict"))
     gensim.corpora.MmCorpus.serialize(os.path.join(models_dir, "training_corpus.mm"),
                                       training_corpus)
