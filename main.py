@@ -1,37 +1,25 @@
-from packages.PublicationCorpus import PublicationCorpus, TestCorpus
+from packages.PublicationCorpus import TrainingCorpus, EvaluationCorpus
 import packages.data_path_parser as dp
-import os
-import nltk
-import gensim
 from packages.extract_texts import kill_files_in_output_before_write
+import os
+import gensim
 
-annotated_data_for_training = [dp.get_annotated_training_set(),dp.get_annotated_dev_set()]
-annotated_data_for_evaluation = dp.get_annotated_test_set()
 models_dir = dp.get_models_dir()
+
+def save_dictionary_and_corpus(corpus,name):
+    corpus.dictionary.save(os.path.join(models_dir, name+".dict"))
+    gensim.corpora.MmCorpus.serialize(os.path.join(models_dir, name+".mm"), corpus)
+    with open(os.path.join(models_dir, name+".clf"), 'w+') as ann_file:
+        ann_file.write('\n'.join(corpus.journal_categories))
+    ann_file.close()
 
 def main():
     kill_files_in_output_before_write(models_dir)
-    stoplist = set(nltk.corpus.stopwords.words("english"))
-
-    training_corpus = PublicationCorpus(stoplist,*annotated_data_for_training)
-    training_corpus.dictionary.filter_extremes(no_below=1, no_above=0.9)
-    training_corpus.dictionary.save(os.path.join(models_dir, "training_corpus.dict"))
-    gensim.corpora.MmCorpus.serialize(os.path.join(models_dir, "training_corpus.mm"),
-                                      training_corpus)
-
-    with open(os.path.join(models_dir, "training_corpus.clf"), 'w+') as annfile_train:
-        annfile_train.write('\n'.join(training_corpus.journal_categories))
-    annfile_train.close()
-
-    evaluation_corpus = TestCorpus(annotated_data_for_evaluation, stoplist, training_corpus.dictionary)
-
-    evaluation_corpus.dictionary.save(os.path.join(models_dir, "evaluation_corpus.dict"))
-    gensim.corpora.MmCorpus.serialize(os.path.join(models_dir, "evaluation_corpus.mm"),
-                                      evaluation_corpus)
-
-    with open(os.path.join(models_dir, 'evaluation_corpus.clf'), 'w+') as annfile_eval:
-        annfile_eval.write('\n'.join(evaluation_corpus.journal_categories))
-    annfile_eval.close()
+    training_corpus = TrainingCorpus(1000,'train')
+    save_dictionary_and_corpus(training_corpus,'training_corpus')
+    evaluation_corpus = EvaluationCorpus(training_corpus.dictionary,'dev')
+    save_dictionary_and_corpus(evaluation_corpus,'evaluation_corpus')
+    print 'The vocabulary size is: {}'.format(len(training_corpus.dictionary.keys()))
 
 if __name__ == '__main__':
     try:
