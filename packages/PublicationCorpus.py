@@ -9,6 +9,9 @@ import nltk
 import packages.data_path_parser as dp
 
 
+filename_list = ['CSE','physics','MSE']
+NUM_CLASS = len(filename_list)
+
 datapath_dict = {
     'train': dp.get_annotated_training_set(),
     'dev': dp.get_annotated_dev_set(),
@@ -48,22 +51,23 @@ class TrainingCorpus(Corpus):
         homedirs = get_home_paths_from_tags(*tags)
         Corpus.__init__(self,*homedirs)
         self.dictionary = gensim.corpora.Dictionary(extract_for_dict(self.homedirs, self.stoplist))
-        self.dictionary.filter_tokens(good_ids=self.get_informative_terms(informative_amount))
+        if informative_amount != 0:
+            self.dictionary.filter_tokens(good_ids=self.get_informative_terms(informative_amount))
 
     def get_informative_terms(self,feature_amount_each):
         all_corpus = itertools.chain(*[extract_from_texts(homedir, self.stoplist) for homedir in self.homedirs])
-        dict_lst = [defaultdict(lambda:1.0) for i in range(3)]
-        mi_lst = [defaultdict(lambda:1.0) for i in range(3)]
+        dict_lst = [defaultdict(lambda:1.0) for i in range(NUM_CLASS)]
+        mi_lst = [defaultdict(lambda:1.0) for i in range(NUM_CLASS)]
         term_list = self.dictionary.keys()
         for doc, journal_category in all_corpus:
             for term, fqcy in self.dictionary.doc2bow(doc):
                 dict_lst[int(journal_category)][term] += 1
 
-        term_count = {term: sum(dict_lst[jt][term] for jt in range(3)) for term in term_list}
-        class_count = {clss: sum(dict_lst[clss][term] for term in term_list) for clss in range(3)}
+        term_count = {term: sum(dict_lst[jt][term] for jt in range(NUM_CLASS)) for term in term_list}
+        class_count = {clss: sum(dict_lst[clss][term] for term in term_list) for clss in range(NUM_CLASS)}
         total_count = sum(v for k,v in class_count.items())
 
-        for category in range(3):
+        for category in range(NUM_CLASS):
             for term in term_list:
                 n11 = dict_lst[category][term]
                 mi_lst[category][term] = calc_mutual_information(n11,
@@ -71,13 +75,18 @@ class TrainingCorpus(Corpus):
                                                 term_count[term],
                                                 total_count)
 
-        sorted_mi = [[]]*3
-        for category in range(3):
-            sorted_mi[category] = sorted(mi_lst[category].items(), key=operator.itemgetter(1))
+        sorted_mi = [[]]*NUM_CLASS
+        for category in range(NUM_CLASS):
+            sorted_mi[category] = sorted(mi_lst[category].items(), key=operator.itemgetter(1), reverse=True)
 
         good_ids = []
-        for category in range(3):
+        for category in range(NUM_CLASS):
             sorted_mi_idlist = [mi[0] for mi in sorted_mi[category]]
+            with open('./storage/{}.txt'.format(filename_list[category]), 'w+') as fn:
+                for mi in sorted_mi[category][:feature_amount_each]:
+                    fn.write('{}\t{}\t{}\n'.format(mi[0], self.dictionary.get(mi[0]), mi[1]))
+            fn.close()
+
             good_ids.extend(sorted_mi_idlist[:feature_amount_each])
         return set(good_ids)
 
@@ -102,6 +111,9 @@ def extract_from_texts(homedir, stoplist):
             texts_raw = text_file.read()
         text_file.close()
         texts, journal_category = texts_raw.split('\t\t\t')
-        yield [token.lower() if sum(1 for c in token if ud.category(c)=='Lu')==1 else token for token in
-            gensim.utils.tokenize(texts, deacc=True, errors="ignore")
-            if token not in stoplist], journal_category
+        yield [to_lower(token)
+            for token in gensim.utils.tokenize(texts, deacc=True, errors="ignore")
+            if to_lower(token) not in stoplist], journal_category
+
+def to_lower(token):
+    return token.lower() if sum(1 for c in token if ud.category(c)=='Lu')==1 else token

@@ -7,8 +7,8 @@ reduced_dimension = 1000
 model_to_use = 'bow'
 if_tfidf = False
 
-param_grid_svm = {'C':[1e-1,1,10,50,100,500], 'gamma':[0,1e-3,1e-2,1e-1,1,10,100,'auto']}
-param_grid_nb = {'alpha':[1e-4,5e-4,1e-3,5e-3,1e-2,1e-1]}
+param_grid_svm = {'C':[1e-1,1,10,1e3,1e4,1e5], 'gamma':[0,1e-3,1e-2,1e-1,1,10,100,'auto']}
+param_grid_nb = {'alpha':[1e-9,1e-8,1e-7,1e-6,5e-6,1e-5,5e-5,1e-4]}
 
 def main():
     train_corpus = ClassificationCorpus(training_corpus_name,model=model_to_use)
@@ -26,7 +26,7 @@ def labeling_corpus(training_corpus, training_categories, evaluation_corpus, eva
     # estimator, param_grid = svm_estimator()
 
     topic_classifier = estimator
-    # topic_classifier = model_selection.GridSearchCV(estimator=estimator, param_grid=param_grid,n_jobs=-1, cv=5)
+    topic_classifier = model_selection.GridSearchCV(estimator=estimator, param_grid=param_grid,n_jobs=-1, cv=10)
     topic_classifier.fit(training_corpus, training_categories)
     pred_categories = topic_classifier.predict(evaluation_corpus)
     confusion_matrix = metrics.confusion_matrix(evaluation_categories, pred_categories)
@@ -38,9 +38,11 @@ def labeling_corpus(training_corpus, training_categories, evaluation_corpus, eva
     print confusion_matrix
 
 def naive_bayes_estimator():
-    return naive_bayes.MultinomialNB(alpha=0.005), param_grid_nb
+    return naive_bayes.MultinomialNB(alpha=1e-7), param_grid_nb
+    # return naive_bayes.MultinomialNB(alpha=0.005), param_grid_nb
+
 def svm_estimator():
-    return svm.SVC(decision_function_shape='ovo', C=7352, gamma='auto'), param_grid_svm
+    return svm.SVC(decision_function_shape='ovo', C=10, gamma='auto'), param_grid_svm
 
 if __name__ == '__main__':
     try:
