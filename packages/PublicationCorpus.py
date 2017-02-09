@@ -19,7 +19,15 @@ datapath_dict = {
 }
 
 def get_stoplist():
-    return set(nltk.corpus.stopwords.words("english"))
+    handcraft_stopwords = """letter BY elsevier responsibility license com
+                             procedia sciencedirect ND NC CC IERI ieri abstract
+                             online institute tel conference mail keywords doi
+                             open selection ScienceDirect creativecommons licenses
+                             published http procedia www peer acknowledgements
+                             journal review international references AASRI aasri
+                             IEEE org fax""".split()
+    stopwords = set(nltk.corpus.stopwords.words("english")+handcraft_stopwords)
+    return stopwords
 
 def get_home_paths_from_tags(*tags):
     homedirs = [datapath_dict.get(tag) for tag in list(tags)]

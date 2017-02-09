@@ -32,6 +32,10 @@ class PubHandler(xml.sax.ContentHandler):
         self.intitle = False
         self.injournalname = False
         self.textbuilder_journalname = []
+        self.textbuilder_rawtext = []
+        self.have_raw_text = False
+        self.have_ce_para = False
+        self.inraw = False
 
 
    def startElement(self, tag, attributes):
@@ -41,8 +45,17 @@ class PubHandler(xml.sax.ContentHandler):
         if v == "author-highlights":
             self.highlightflag = True
         if tag == "ce:para":
+            if self.have_raw_text:
+                self.paraid = 0
+                self.text = collections.OrderedDict()
+                self.have_raw_text = False
             self.inpara = True
+            self.have_ce_para = True
             self.paraid += 1 #attributes.get("id")  # there isn't always one, so let's use a counter instead
+        if tag == "xocs:rawtext" and not self.have_ce_para:
+            self.have_raw_text = True
+            self.inraw = True
+            self.paraid += 1
         if tag == "ce:abstract" and self.highlightflag == False:
             self.inabstract = True
         if tag == "ce:title" or tag == "dc:title":
@@ -71,6 +84,12 @@ class PubHandler(xml.sax.ContentHandler):
                 para = "".join(self.textbuilder)
                 self.text[self.paraid] = para
                 self.textbuilder = []
+        elif tag == "xocs:rawtext":
+            self.inraw = False
+            if len(self.textbuilder_rawtext) > 0:
+                para = "".join(self.textbuilder_rawtext)
+                self.text[self.paraid] = para
+                textbuilder_rawtext = []
         if tag == "ce:title" or tag == "dc:title":
             self.intitle = False
             if len(self.textbuilder_title) > 0:
@@ -113,6 +132,8 @@ class PubHandler(xml.sax.ContentHandler):
             self.textbuilder_highlight.append(content)
         elif self.inpara == True and self.highlightflag == False:
             self.textbuilder.append(content)
+        elif self.inraw == True:
+            self.textbuilder_rawtext.append(content)
 
 
 def parseXML(fpath="data/dev/S0010938X13003818.xml"):
