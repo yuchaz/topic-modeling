@@ -1,0 +1,111 @@
+S0045782512000266.txt	Computer Methods in Applied Mechanics and Engineering
+S0045782513000546.txt	Computer Methods in Applied Mechanics and Engineering
+S0045782513001473.txt	Computer Methods in Applied Mechanics and Engineering
+S004578251300176X.txt	Computer Methods in Applied Mechanics and Engineering
+S0098300412001793.txt	Computers & Geosciences
+S0098300413002185.txt	Computers & Geosciences
+S0142061516308079.txt	International Journal of Electrical Power & Energy Systems
+S0266352X16301550.txt	Computers and Geotechnics
+S0736585316300661.txt	Telematics and Informatics
+S0957417416301786.txt	Expert Systems with Applications
+S0957417416302561 (1).txt	Expert Systems with Applications
+S0957417416302561.txt	Expert Systems with Applications
+S1361841516300822.txt	Medical Image Analysis
+S1364815216303541.txt	Environmental Modelling & Software
+S1566253516300069.txt	Information Fusion
+S1566253516300252.txt	Information Fusion
+S1875952116300209.txt	Entertainment Computing
+S2212667812000032.txt	IERI Procedia
+S221266781200007X.txt	IERI Procedia
+S2212667812000524.txt	IERI Procedia
+S221266781300018X.txt	IERI Procedia
+S2212667813000762.txt	IERI Procedia
+S2212667814000045 (1).txt	IERI Procedia
+S2212667814000045.txt	IERI Procedia
+S2212667814000124.txt	IERI Procedia
+S2212667814000690 (1).txt	IERI Procedia
+S2212667814000690.txt	IERI Procedia
+S2212667814000756.txt	IERI Procedia
+S2212667814000884 (1).txt	IERI Procedia
+S2212667814000884.txt	IERI Procedia
+S2212667814001166.txt	IERI Procedia
+S2212667814001348.txt	IERI Procedia
+S2212667814001440.txt	IERI Procedia
+S2212671612000121.txt	AASRI Procedia
+S2212671612000704.txt	AASRI Procedia
+S2212671612001783.txt	AASRI Procedia
+S221267161200217X.txt	AASRI Procedia
+S0045782512000266.txt	Computer Methods in Applied Mechanics and Engineering
+S0045782513000546.txt	Computer Methods in Applied Mechanics and Engineering
+S0045782513001473.txt	Computer Methods in Applied Mechanics and Engineering
+S004578251300176X.txt	Computer Methods in Applied Mechanics and Engineering
+S0098300412001793.txt	Computers & Geosciences
+S0098300413002185.txt	Computers & Geosciences
+S0142061516308079.txt	International Journal of Electrical Power & Energy Systems
+S0266352X16301550.txt	Computers and Geotechnics
+S0736585316300661.txt	Telematics and Informatics
+S0957417416301786.txt	Expert Systems with Applications
+S0957417416302561 (1).txt	Expert Systems with Applications
+S0957417416302561.txt	Expert Systems with Applications
+S1361841516300822.txt	Medical Image Analysis
+S1364815216303541.txt	Environmental Modelling & Software
+S1566253516300069.txt	Information Fusion
+S1566253516300252.txt	Information Fusion
+S1875952116300209.txt	Entertainment Computing
+S2212667812000032.txt	IERI Procedia
+S221266781200007X.txt	IERI Procedia
+S2212667812000524.txt	IERI Procedia
+S221266781300018X.txt	IERI Procedia
+S2212667813000762.txt	IERI Procedia
+S2212667814000045 (1).txt	IERI Procedia
+S2212667814000045.txt	IERI Procedia
+S2212667814000124.txt	IERI Procedia
+S2212667814000690 (1).txt	IERI Procedia
+S2212667814000690.txt	IERI Procedia
+S2212667814000756.txt	IERI Procedia
+S2212667814000884 (1).txt	IERI Procedia
+S2212667814000884.txt	IERI Procedia
+S2212667814001166.txt	IERI Procedia
+S2212667814001348.txt	IERI Procedia
+S2212667814001440.txt	IERI Procedia
+S2212671612000121.txt	AASRI Procedia
+S2212671612000704.txt	AASRI Procedia
+S2212671612001783.txt	AASRI Procedia
+S221267161200217X.txt	AASRI Procedia
+S0045782512000266.txt	Computer Methods in Applied Mechanics and Engineering
+S0045782513000546.txt	Computer Methods in Applied Mechanics and Engineering
+S0045782513001473.txt	Computer Methods in Applied Mechanics and Engineering
+S004578251300176X.txt	Computer Methods in Applied Mechanics and Engineering
+S0098300412001793.txt	Computers & Geosciences
+S0098300413002185.txt	Computers & Geosciences
+S0142061516308079.txt	International Journal of Electrical Power & Energy Systems
+S0266352X16301550.txt	Computers and Geotechnics
+S0736585316300661.txt	Telematics and Informatics
+S0957417416301786.txt	Expert Systems with Applications
+S0957417416302561 (1).txt	Expert Systems with Applications
+S0957417416302561.txt	Expert Systems with Applications
+S1361841516300822.txt	Medical Image Analysis
+S1364815216303541.txt	Environmental Modelling & Software
+S1566253516300069.txt	Information Fusion
+S1566253516300252.txt	Information Fusion
+S1875952116300209.txt	Entertainment Computing
+S2212667812000032.txt	IERI Procedia
+S221266781200007X.txt	IERI Procedia
+S2212667812000524.txt	IERI Procedia
+S221266781300018X.txt	IERI Procedia
+S2212667813000762.txt	IERI Procedia
+S2212667814000045 (1).txt	IERI Procedia
+S2212667814000045.txt	IERI Procedia
+S2212667814000124.txt	IERI Procedia
+S2212667814000690 (1).txt	IERI Procedia
+S2212667814000690.txt	IERI Procedia
+S2212667814000756.txt	IERI Procedia
+S2212667814000884 (1).txt	IERI Procedia
+S2212667814000884.txt	IERI Procedia
+S2212667814001166.txt	IERI Procedia
+S2212667814001348.txt	IERI Procedia
+S2212667814001440.txt	IERI Procedia
+S2212671612000121.txt	AASRI Procedia
+S2212671612000704.txt	AASRI Procedia
+S2212671612001783.txt	AASRI Procedia
+S221267161200217X.txt	AASRI Procedia

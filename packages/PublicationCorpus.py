@@ -7,7 +7,9 @@ import operator
 import math
 import nltk
 import packages.data_path_parser as dp
-
+import re
+from packages.extract_texts import extract_journalname_from_xml
+import packages.data_path_parser as dp
 
 filename_list = ['CSE','physics','MSE']
 NUM_CLASS = len(filename_list)
@@ -16,6 +18,11 @@ datapath_dict = {
     'train': dp.get_annotated_training_set(),
     'dev': dp.get_annotated_dev_set(),
     'test': dp.get_annotated_test_set()
+}
+
+strange_dict = {
+    './storage/texts/train': dp.get_training_corpus(),
+    './storage/texts/dev': dp.get_dev_corpus()
 }
 
 def get_stoplist():
@@ -119,9 +126,19 @@ def extract_from_texts(homedir, stoplist):
             texts_raw = text_file.read()
         text_file.close()
         texts, journal_category = texts_raw.split('\t\t\t')
+        # write_error_journal_name(text_name,homedir,journal_category,texts)
         yield [to_lower(token)
             for token in gensim.utils.tokenize(texts, deacc=True, errors="ignore")
             if to_lower(token) not in stoplist], journal_category
 
 def to_lower(token):
     return token.lower() if sum(1 for c in token if ud.category(c)=='Lu')==1 else token
+
+def write_error_journal_name(text_name,homedir,journal_category,texts):
+    list_to_find = 'temperatures temperature electron quantum scattering'.split()
+    rgx = re.compile('|'.join(map(re.escape, list_to_find)))
+    if int(journal_category) == 0 and rgx.search(texts):
+        with open ('./error_journals.txt', 'a') as errfile:
+            errfile.write('{}\t{}\n'.format(text_name,
+                extract_journalname_from_xml(os.path.join(strange_dict[homedir], os.path.splitext(text_name)[0]+'.xml'))))
+        errfile.close()
