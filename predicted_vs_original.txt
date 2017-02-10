@@ -1,0 +1,86 @@
+Model usage: bow, alpha usage: 1e-09, vocab_size: 2147
+predicted	correct	journal name
+2	0	Computers in Biology and Medicine
+2	1	The Journal of Chemical Thermodynamics
+1	2	Surface Science
+2	1	Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms
+1	2	Composite Structures
+0	2	Journal of Archaeological Science
+2	1	Journal of Power Sources
+1	2	NDT & E International
+1	2	NDT & E International
+2	1	Journal of Photochemistry and Photobiology A: Chemistry
+2	1	Journal of Photochemistry and Photobiology A: Chemistry
+2	0	Environmental Modelling & Software
+2	0	Environmental Modelling & Software
+2	0	Environmental Modelling & Software
+2	1	Comptes Rendus Physique
+2	1	Particuology
+1	0	Biomedical Signal Processing and Control
+1	0	Journal of Computational Science
+
+
+Model usage: tfidf, alpha usage: 1e-11, vocab_size: 2147
+predicted	correct	journal name
+2	0	Computers in Biology and Medicine
+2	1	The Journal of Chemical Thermodynamics
+1	2	Surface Science
+2	1	Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms
+1	2	Composite Structures
+0	2	Journal of Archaeological Science
+2	1	Journal of Power Sources
+0	2	Computational Materials Science
+1	2	NDT & E International
+1	2	NDT & E International
+1	2	NDT & E International
+2	1	Journal of Photochemistry and Photobiology A: Chemistry
+2	0	Environmental Modelling & Software
+1	0	Environmental Modelling & Software
+2	1	Comptes Rendus Physique
+2	1	Particuology
+1	0	Biomedical Signal Processing and Control
+1	0	Journal of Computational Science
+
+
+Model usage: bow, alpha usage: 1e-30, vocab_size: 3122
+predicted	correct	journal name
+2	0	Computers in Biology and Medicine
+2	1	The Journal of Chemical Thermodynamics
+1	2	Surface Science
+2	0	Computers & Geosciences
+2	1	Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms
+1	2	Composite Structures
+0	2	Journal of Archaeological Science
+2	1	Journal of Power Sources
+1	2	Computational Materials Science
+1	2	NDT & E International
+1	2	NDT & E International
+2	1	Journal of Photochemistry and Photobiology A: Chemistry
+2	0	Environmental Modelling & Software
+1	0	Environmental Modelling & Software
+2	1	Comptes Rendus Physique
+2	1	Particuology
+1	0	Biomedical Signal Processing and Control
+1	0	Journal of Computational Science
+
+
+Model usage: tfidf, alpha usage: 1e-15, vocab_size: 3122
+predicted	correct	journal name
+2	0	Computers in Biology and Medicine
+2	1	The Journal of Chemical Thermodynamics
+1	2	Surface Science
+2	1	Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms
+1	2	Composite Structures
+0	2	Journal of Archaeological Science
+2	1	Journal of Power Sources
+1	2	NDT & E International
+1	2	NDT & E International
+2	1	Journal of Photochemistry and Photobiology A: Chemistry
+2	0	Environmental Modelling & Software
+1	0	Environmental Modelling & Software
+2	1	Comptes Rendus Physique
+2	1	Particuology
+1	0	Biomedical Signal Processing and Control
+1	0	Journal of Computational Science
+
+
