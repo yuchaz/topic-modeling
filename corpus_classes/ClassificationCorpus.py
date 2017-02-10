@@ -8,7 +8,7 @@ models_dir = dp.get_models_dir()
 
 class ClassificationCorpus(object):
     def __init__(self,filename,model='tfidf',dim=100,if_tfidf=True):
-        self.dictionary, self.corpus, self.categories = \
+        self.dictionary, self.corpus, self.categories, self.journal_names = \
             get_dictionary_and_corpus(filename)
         self.model = model
         self.dim = dim
@@ -47,4 +47,7 @@ def get_dictionary_and_corpus(filename):
     with open(os.path.join(models_dir, filename+'.clf'), 'r+') as deci_file:
         categories = np.array(deci_file.read().split('\n'))
     deci_file.close()
-    return dictionary, corpus, categories
+    with open(os.path.join(models_dir, filename+'.jn'), 'r+') as jn_file:
+        journal_name_list = jn_file.read().split('\n')
+    jn_file.close()
+    return dictionary, corpus, categories, journal_name_list

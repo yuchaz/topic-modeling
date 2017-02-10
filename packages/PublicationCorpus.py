@@ -48,11 +48,13 @@ class Corpus(object):
         self.homedirs = list(homedirs)
         self.stoplist = get_stoplist()
         self.journal_categories = []
+        self.journal_name = []
 
     def __iter__(self):
         all_corpus = itertools.chain(*[extract_from_texts(homedir, self.stoplist) for homedir in self.homedirs])
-        for tokens, journal_category in all_corpus:
+        for tokens, journal_category, journal_name in all_corpus:
             self.journal_categories.append(journal_category)
+            self.journal_name.append(journal_name)
             yield self.dictionary.doc2bow(tokens)
 
 class EvaluationCorpus(Corpus):
@@ -74,7 +76,7 @@ class TrainingCorpus(Corpus):
         dict_lst = [defaultdict(lambda:1.0) for i in range(NUM_CLASS)]
         mi_lst = [defaultdict(lambda:1.0) for i in range(NUM_CLASS)]
         term_list = self.dictionary.keys()
-        for doc, journal_category in all_corpus:
+        for doc, journal_category, jn in all_corpus:
             for term, fqcy in self.dictionary.doc2bow(doc):
                 dict_lst[int(journal_category)][term] += 1
 
@@ -115,7 +117,7 @@ def calc_mutual_information(n11,n_1,n1_,n_doc):
            n00/n_doc * math.log(n00*n_doc / ((n01+n00)*(n10+n00)),2)
 
 def extract_for_dict(homedirs, stoplist):
-    for tokens, jn in itertools.chain(*[extract_from_texts(homedir, stoplist) for homedir in homedirs]):
+    for tokens, jn, jn_name in itertools.chain(*[extract_from_texts(homedir, stoplist) for homedir in homedirs]):
         yield tokens
 
 def extract_from_texts(homedir, stoplist):
@@ -125,11 +127,11 @@ def extract_from_texts(homedir, stoplist):
         with open(os.path.join(homedir, text_name)) as text_file:
             texts_raw = text_file.read()
         text_file.close()
-        texts, journal_category = texts_raw.split('\t\t\t')
+        texts, journal_category, journal_name = texts_raw.split('\t\t\t')
         # write_error_journal_name(text_name,homedir,journal_category,texts)
         yield [to_lower(token)
             for token in gensim.utils.tokenize(texts, deacc=True, errors="ignore")
-            if to_lower(token) not in stoplist], journal_category
+            if to_lower(token) not in stoplist], journal_category, journal_name
 
 def to_lower(token):
     return token.lower() if sum(1 for c in token if ud.category(c)=='Lu')==1 else token

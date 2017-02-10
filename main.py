@@ -12,6 +12,9 @@ def save_dictionary_and_corpus(corpus,name):
     with open(os.path.join(models_dir, name+".clf"), 'w+') as ann_file:
         ann_file.write('\n'.join(corpus.journal_categories))
     ann_file.close()
+    with open(os.path.join(models_dir, name+".jn"), 'w+') as jnfn:
+        jnfn.write('\n'.join(corpus.journal_name))
+    jnfn.close()
 
 def main():
     kill_files_in_output_before_write(models_dir)

@@ -65,9 +65,11 @@ def parse_xml_to_annotated_data(xml_inpath, annotated_outpath, extract_method):
         aoutfile_name = os.path.splitext(xinfile_name)[0]+".txt"
         outfile_path = os.path.join(os.path.join(annotated_outpath, aoutfile_name))
         with open(outfile_path, 'w+') as ofile:
-            content_to_write = u'{}\t\t\t{}'.format(extract_method(os.path.join(xml_inpath, xinfile_name)),
+            content_to_write = u'{}\t\t\t{}\t\t\t{}'.format(extract_method(os.path.join(xml_inpath, xinfile_name)),
                 map_journalname_to_category.get(
-                    extract_journalname_from_xml(os.path.join(xml_inpath, xinfile_name))).category)
+                    extract_journalname_from_xml(os.path.join(xml_inpath, xinfile_name))).category,
+                map_journalname_to_category.get(
+                    extract_journalname_from_xml(os.path.join(xml_inpath, xinfile_name))).journalname)
             ofile.write(content_to_write)
         ofile.close()
 
