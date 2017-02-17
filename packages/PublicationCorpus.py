@@ -74,7 +74,8 @@ class TrainingCorpus(Corpus):
     def get_informative_terms(self,feature_amount_each):
         all_corpus = itertools.chain(*[extract_from_texts(homedir, self.stoplist) for homedir in self.homedirs])
         dict_lst = [defaultdict(lambda:1.0) for i in range(NUM_CLASS)]
-        mi_lst = [defaultdict(lambda:1.0) for i in range(NUM_CLASS)]
+        # mi_lst = [defaultdict(lambda:1.0) for i in range(NUM_CLASS)]
+        mi_lst = defaultdict(lambda:1.0)
         term_list = self.dictionary.keys()
         for doc, journal_category, jn in all_corpus:
             for term, fqcy in self.dictionary.doc2bow(doc):
@@ -84,27 +85,30 @@ class TrainingCorpus(Corpus):
         class_count = {clss: sum(dict_lst[clss][term] for term in term_list) for clss in range(NUM_CLASS)}
         total_count = sum(v for k,v in class_count.items())
 
-        for category in range(NUM_CLASS):
-            for term in term_list:
-                n11 = dict_lst[category][term]
-                mi_lst[category][term] = calc_mutual_information(n11,
-                                                class_count[category],
-                                                term_count[term],
-                                                total_count)
+        for term in term_list:
+            mi_lst[term] = sum((calc_mutual_information(dict_lst[category][term],
+                                            class_count[category],
+                                            term_count[term],
+                                            total_count) for category in range(NUM_CLASS)))
 
-        sorted_mi = [[]]*NUM_CLASS
-        for category in range(NUM_CLASS):
-            sorted_mi[category] = sorted(mi_lst[category].items(), key=operator.itemgetter(1), reverse=True)
+        sorted_mi = sorted(mi_lst.items(), key=operator.itemgetter(1), reverse=True)
+        # for category in range(NUM_CLASS):
+        #     sorted_mi[category] = sorted(mi_lst[category].items(), key=operator.itemgetter(1), reverse=True)
 
-        good_ids = []
-        for category in range(NUM_CLASS):
-            sorted_mi_idlist = [mi[0] for mi in sorted_mi[category]]
-            with open('./storage/{}.txt'.format(filename_list[category]), 'w+') as fn:
-                for mi in sorted_mi[category][:feature_amount_each]:
-                    fn.write('{}\t{}\t{}\n'.format(mi[0], self.dictionary.get(mi[0]), mi[1]))
+        # good_ids = []
+        # for category in range(NUM_CLASS):
+        #     sorted_mi_idlist = [mi[0] for mi in sorted_mi[category]]
+        #     with open('./storage/{}.txt'.format(filename_list[category]), 'w+') as fn:
+        #         for mi in sorted_mi[category][:feature_amount_each]:
+        #             fn.write('{}\t{}\t{}\n'.format(mi[0], self.dictionary.get(mi[0]), mi[1]))
+        #     fn.close()
+        #
+        #     good_ids.extend(sorted_mi_idlist[:feature_amount_each])
+        good_ids = [mi[0] for mi in sorted_mi[:feature_amount_each*3]]
+        with open('./storage/mi.txt', 'w+') as fn:
+            for mi in sorted_mi[:feature_amount_each*3]:
+                fn.write('{}\t{}\t{}\n'.format(mi[0], self.dictionary.get(mi[0]), mi[1]))
             fn.close()
-
-            good_ids.extend(sorted_mi_idlist[:feature_amount_each])
         return set(good_ids)
 
 def calc_mutual_information(n11,n_1,n1_,n_doc):
@@ -112,9 +116,12 @@ def calc_mutual_information(n11,n_1,n1_,n_doc):
     n01 = n_1 - n11
     n00 = n_doc - n11 - n10 - n01
     return n11/n_doc * math.log(n11*n_doc / (n_1*n1_),2) + \
-           n01/n_doc * math.log(n01*n_doc / ((n01+n00)*n_1),2) + \
-           n10/n_doc * math.log(n10*n_doc / ((n10+n00)*n1_),2) + \
-           n00/n_doc * math.log(n00*n_doc / ((n01+n00)*(n10+n00)),2)
+           n01/n_doc * math.log(n01*n_doc / ((n01+n00)*n_1),2)
+
+    # return n11/n_doc * math.log(n11*n_doc / (n_1*n1_),2) + \
+    #        n01/n_doc * math.log(n01*n_doc / ((n01+n00)*n_1),2) + \
+    #        n10/n_doc * math.log(n10*n_doc / ((n10+n00)*n1_),2) + \
+    #        n00/n_doc * math.log(n00*n_doc / ((n01+n00)*(n10+n00)),2)
 
 def extract_for_dict(homedirs, stoplist):
     for tokens, jn, jn_name in itertools.chain(*[extract_from_texts(homedir, stoplist) for homedir in homedirs]):

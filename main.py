@@ -18,7 +18,7 @@ def save_dictionary_and_corpus(corpus,name):
 
 def main():
     kill_files_in_output_before_write(models_dir)
-    training_corpus = TrainingCorpus(1500,'train','dev')
+    training_corpus = TrainingCorpus(1000,'train','dev')
     save_dictionary_and_corpus(training_corpus,'training_corpus')
     evaluation_corpus = EvaluationCorpus(training_corpus.dictionary,'test')
     save_dictionary_and_corpus(evaluation_corpus,'evaluation_corpus')
